@@ -17,6 +17,7 @@ import {
     Modal,
     Actions,
     Stack,
+    Tabs,
     ActionConst,
 } from 'react-native-router-flux';
 import Toast from '@remobile/react-native-toast';
@@ -24,16 +25,17 @@ import Loading from '../components/Loading/Loading'
 /**
  * import添加新页面
  * */
-// //开屏页
-// import Launch from '../scenes/Home/Launch';
+
 // //主界面  4个tab存放于这个界面
 import Home from '../scenes/Home/Home';
 
-
-
-
-
-
+// 4个tab界面
+import Exchange from '../scenes/Exchange/Exchange'
+import Send from '../scenes/Send/Send'
+import Wallets from '../scenes/Wallets/Wallets'
+import Request from '../scenes/Request/Request'
+// tab的图标  以及名字
+import TabIcon from '../components/TabIcon/TabIcon';
 
 let self; //将App组件中的this赋给全局的self
 global.showLoading = false; //所有子页面均可直接调用global.showLoading()来展示Loading
@@ -120,8 +122,53 @@ export default class Root_Router extends Component<Props> {
                     createReducer={reducerCreate}
                     getSceneStyle={getSceneStyle}>
                     <Scene key="root" headerMode='screen'>
-                        <Scene key="launch" component={Home} initial hideNavBar hideTabBar/>
+                        <Scene key="home" component={Home} initial hideNavBar hideTabBar/>
+                        <Tabs
+                            // type={ActionConst.REPLACE}
+                            key="tabbar"
+                            duration={0}
+                            tabBarPosition={"bottom"}
+                            tabBarStyle={{backgroundColor:'#fff'}}
+                            // tabBarComponent={NavigationComponent}
+                            hideNavBar
+                            showLabel={false}
+                            wrap={false}
+                            animationEnabled={false}
+                            tabs={true}
+                            swipeEnabled={false}
+                            lazy={true}
+                        >
+                            <Scene
+                                key="wallets"
+                                component={Wallets}
+                                icon_id={0}
+                                hideNavBar
+                                icon={TabIcon} />
 
+                            <Scene
+                                key="request"
+                                icon={TabIcon}
+                                icon_id={1}
+                                component={Request}
+                                hideNavBar
+                            />
+
+                            <Scene
+                                key="send"
+                                hideNavBar
+                                icon_id={2}
+                                icon={TabIcon}
+                                component={Send}
+                            />
+
+                            <Scene  key="exchange"
+                                    hideNavBar
+                                    icon_id={3}
+                                    icon={TabIcon}
+                                    component={Exchange}
+                            />
+
+                        </Tabs>
                     </Scene>
                 </Router>
                 <Loading ref={r=>{this.Loading = r}} hide = {true} />

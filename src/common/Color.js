@@ -6,6 +6,7 @@
 const Color = {
 
     bg:'#fff',  //背景色
+    Tabtext:'#000'
 
 }
 

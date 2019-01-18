@@ -3,16 +3,15 @@
 //  */
 const Images = {
     Tab: {
-        // main_s:                      require('../img/icon_main_s.png'),
-        // main_n:                      require('../img/icon_main_n.png'),
-        // class_s:                     require('../img/icon_class_s.png'),
-        // class_n:                     require('../img/icon_class_n.png'),
-        // comunity_s:                  require('../img/icon_comunity_s.png'),
-        // comunity_n:                  require('../img/icon_comunity_n.png'),
-        // message_s:                   require('../img/icon_message_s.png'),
-        // message_n:                   require('../img/icon_message_n.png'),
-        // mine_s:                      require('../img/icon_mine_s.png'),
-        // mine_n:                      require('../img/icon_mine_n.png'),
+        main_s:                      require('../img/icon_main_s.png'),
+        main_n:                      require('../img/icon_main_n.png'),
+        class_s:                     require('../img/icon_class_s.png'),
+        class_n:                     require('../img/icon_class_n.png'),
+
+        message_s:                   require('../img/icon_message_s.png'),
+        message_n:                   require('../img/icon_message_n.png'),
+        mine_s:                      require('../img/icon_mine_s.png'),
+        mine_n:                      require('../img/icon_mine_n.png'),
     },
 
     Img: {
