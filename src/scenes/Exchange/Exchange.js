@@ -16,6 +16,7 @@ export default class Exchange extends Component<Props> {
         return (
             <View style={styles.container}>
                 <Text style={{fontSize:FONT_SIZE(20),color:Color.Tabtext}}>Exchange</Text>
+                <Text onPress={Actions.login} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我去登录</Text>
             </View>
         );
     }

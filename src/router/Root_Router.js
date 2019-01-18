@@ -1,4 +1,3 @@
-
 /**
  * Created by MZY on 2018/6/1.
  *  @format
@@ -9,7 +8,7 @@
  */
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TouchableHighlight, Platform, BackHandler, NativeModules} from 'react-native';
-import { Root } from "native-base";
+import {Root} from "native-base";
 import {
     Scene,
     Reducer,
@@ -37,6 +36,11 @@ import Request from '../scenes/Request/Request'
 // tab的图标  以及名字
 import TabIcon from '../components/TabIcon/TabIcon';
 
+//登录
+import Login from '../scenes/Login/Login';
+//忘记密码
+import ForgetPSW from '../scenes/Login/ForgetPSW';
+
 let self; //将App组件中的this赋给全局的self
 global.showLoading = false; //所有子页面均可直接调用global.showLoading()来展示Loading
 global.closeLoading = false; //所有子页面均可直接调用global.closeLoading()来关闭Loading
@@ -55,11 +59,24 @@ const styles = StyleSheet.create({
     tabBarSelectedItemStyle: {
         backgroundColor: '#ddd',
     },
-    navigationBarStyle: {
-        backgroundColor: '#f8f8f8'
-    },
+
     title: {
-        fontWeight:'normal',fontSize:16,flex:1,textAlign:'center'
+        fontWeight: 'normal', fontSize: 16, flex: 1, textAlign: 'center'
+    },
+    titleStyle: {
+        fontWeight: 'bold',
+        fontSize: FONT_SIZE(15),
+        flex: 1,
+        textAlign: 'center'
+
+    },
+    navigationBarStyle: {
+        backgroundColor: '#fff',
+        flex: 1, alignItems: 'center',
+        elevation: 0, borderBottomWidth: px2dp(1), borderBottomColor: '#e8e8e8'
+    },
+    leftIconStyle: {
+        width: px2dp(20), height: px2dp(20)
     }
 
 });
@@ -115,14 +132,46 @@ export default class Root_Router extends Component<Props> {
 
 
     render() {
-        return(
+        return (
             <Root>
                 <Router
                     backAndroidHandler={onBackPress}
                     createReducer={reducerCreate}
                     getSceneStyle={getSceneStyle}>
                     <Scene key="root" headerMode='screen'>
-                        <Scene key="home" component={Home} initial hideNavBar hideTabBar/>
+                        <Scene
+                            key="home"
+                            component={Home}
+                            initial
+                            hideNavBar
+                            hideTabBar/>
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="忘记密码"
+                            key="forgetpsw"
+                            component={ForgetPSW}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录"
+                            key="login"
+                            component={Login}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+
                         <Tabs
                             // type={ActionConst.REPLACE}
                             key="tabbar"
@@ -143,7 +192,7 @@ export default class Root_Router extends Component<Props> {
                                 component={Wallets}
                                 icon_id={0}
                                 hideNavBar
-                                icon={TabIcon} />
+                                icon={TabIcon}/>
 
                             <Scene
                                 key="request"
@@ -161,17 +210,17 @@ export default class Root_Router extends Component<Props> {
                                 component={Send}
                             />
 
-                            <Scene  key="exchange"
-                                    hideNavBar
-                                    icon_id={3}
-                                    icon={TabIcon}
-                                    component={Exchange}
+                            <Scene key="exchange"
+                                   hideNavBar
+                                   icon_id={3}
+                                   icon={TabIcon}
+                                   component={Exchange}
                             />
 
                         </Tabs>
                     </Scene>
                 </Router>
-                <Loading ref={r=>{this.Loading = r}} hide = {true} />
+                <Loading ref={r=>{this.Loading = r}} hide={true}/>
             </Root>
         )
     }
