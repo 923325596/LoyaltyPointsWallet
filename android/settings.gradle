@@ -1,3 +1,5 @@
 rootProject.name = 'LoyaltyPointsWallet'
+include ':@remobile_react-native-toast'
+project(':@remobile_react-native-toast').projectDir = new File(rootProject.projectDir, '../node_modules/@remobile/react-native-toast/android')
 
 include ':app'
