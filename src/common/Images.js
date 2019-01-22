@@ -15,6 +15,8 @@ const Images = {
     },
 
     Img: {
+        icon_vasi:                   require('../components/Bucks/images/visa.png'),
+        icon_paypal:                 require('../components/Bucks/images/paypal.png')
         // icon_selectphoto:            require('../img/icon_selectphoto.png'),
         // icon_consultdelete:          require('../img/icon_attentButton.png'),
         // icon_guide_1:                require('../img/icon_guide_1.png'),

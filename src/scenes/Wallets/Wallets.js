@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2019/1/18.
+ * Created by MZY on 2019/1/18.
  */
 /**
  * Sample React Native App
@@ -15,9 +15,7 @@ import {WalletHeader, Icon} from '../../components/Bucks/index'
 
 type Props = {};
 export default class Wallets extends Component<Props> {
-  // static defaultProps = {
-  //   title: 'WALLETS'
-  // };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -30,77 +28,105 @@ export default class Wallets extends Component<Props> {
       active: 0,
     };
   }
+
   debouncePress() {
     // this.state.active = index
     alert('1')
     // this.setState()
   }
+
     render() {
         return (
             <View style={styles.container}>
-              <View style={styles.header}>
-                <Text style={styles.headerTitle}>Total Balance</Text>
-                <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance + 'LP'}</Text>
-                <View style={styles.balance}>
-                  <View style={styles.balanceValue}>
-                    <Image style={styles.icon1} source={require('../../components/Bucks/images/visa.png')} />
-                    <View style={styles.balanceAmount}>
-                      <Text style={styles.balanceTitle}>Request</Text>
-                      <Text style={styles.balanceSubtitle}>{this.state.userInfo.income + 'LP'}</Text>
-                    </View>
-                  </View>
-                  <View style={styles.balanceValue}>
-                    <Image style={styles.icon1} source={require('../../components/Bucks/images/paypal.png')} />
-                    <View style={styles.balanceAmount}>
-                      <Text style={styles.balanceTitle}>Send</Text>
-                      <Text style={styles.balanceSubtitle}>{this.state.userInfo.expenses + 'LP'}</Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
-              <View style={styles.footerLine1}>
-                <Text style={styles.leftText}>Wallets</Text>
-                <Text style={styles.rightText}>Add Wallet</Text>
-              </View>
-              <ScrollView style={styles.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
-                <View style={styles.footerLine2}>
-                  { this.state.list.map((info, index) => {
-                    return (
-                      <View>
-                        {this.state.active === index ? <View style={styles.footerCard1} onPress={this.debouncePress}>
-                          <Text style={styles.titleCard}>{info.name}</Text>
-                          <Text style={styles.totalAmount}>{info.points}</Text>
-                          <View style={styles.footerSubtitle}>
-                            <Text style={styles.subtitleCard}>{info.lp}LP</Text>
-                            {/*<Text style={styles.subtitleCardSmall}>LP</Text>*/}
-                          </View>
-                        </View> : <View style={styles.footerCard2} onPress={this.debouncePress}>
-                          <Text style={styles.titleCard2}>{info.name}</Text>
-                          <Text style={styles.totalAmount2}>{info.points}</Text>
-                          <View style={styles.footerSubtitle2}>
-                            <Text style={styles.subtitleCard2}>{info.lp}LP</Text>
-                            {/*<Text style={styles.subtitleCard2Small}>LP</Text>*/}
-                          </View>
-                        </View>}
-                      </View>
-                    );
-                  })}
-                </View>
-              </ScrollView>
-              <View>
-                <View style={styles.Send}>
-                  <Text style={styles.SendTitle}>Send</Text>
-                  <Text style={styles.SendValue}>{this.state.list[0].send}LP</Text>
-                </View>
-                <View style={styles.Send}>
-                  <Text style={styles.SendTitle}>Request</Text>
-                  <Text style={styles.SendValue}>{this.state.list[0].request}LP</Text>
-                </View>
-              </View>
+                {this._renderHreder()}
+                {this._renderWallet()}
+                {this._renderAddWallet()}
+                {this._renderSend()}
             </View>
         );
     }
 }
+
+   _renderHreder=()=>{
+       return (
+           <View style={styles.header}>
+             <Text style={styles.headerTitle}>Total Balance</Text>
+             <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance + 'LP'}</Text>
+             <View style={styles.balance}>
+               <View style={styles.balanceValue}>
+                 <Image style={styles.icon1} source={Images.Img.icon_vasi} />
+                 <View style={styles.balanceAmount}>
+                   <Text style={styles.balanceTitle}>Request</Text>
+                   <Text style={styles.balanceSubtitle}>{this.state.userInfo.income + 'LP'}</Text>
+                 </View>
+               </View>
+               <View style={styles.balanceValue}>
+                 <Image style={styles.icon1} source={Images.Img.icon_paypal} />
+                 <View style={styles.balanceAmount}>
+                   <Text style={styles.balanceTitle}>Send</Text>
+                   <Text style={styles.balanceSubtitle}>{this.state.userInfo.expenses + 'LP'}</Text>
+                 </View>
+               </View>
+             </View>
+           </View>
+       )
+   };
+
+   _renderWallet=()=>{
+        return (
+            <View style={styles.footerLine1}>
+              <Text style={styles.leftText}>Wallets</Text>
+              <Text style={styles.rightText}>Add Wallet</Text>
+            </View>
+        )
+   };
+
+   _renderAddWallet=()=>{
+     return(
+         <ScrollView style={styles.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
+           <View style={styles.footerLine2}>
+               { this.state.list.map((info, index) => {
+                   return (
+                       <View>
+                           {this.state.active === index ?
+                               <View style={styles.footerCard1} onPress={this.debouncePress}>
+                                   <Text style={styles.titleCard}>{info.name}</Text>
+                                   <Text style={styles.totalAmount}>{info.points}</Text>
+                                   <View style={styles.footerSubtitle}>
+                                       <Text style={styles.subtitleCard}>{info.lp}LP</Text>
+                                       {/*<Text style={styles.subtitleCardSmall}>LP</Text>*/}
+                                   </View>
+                               </View> :
+                               <View style={styles.footerCard2} onPress={this.debouncePress}>
+                                   <Text style={styles.titleCard2}>{info.name}</Text>
+                                   <Text style={styles.totalAmount2}>{info.points}</Text>
+                                   <View style={styles.footerSubtitle2}>
+                                       <Text style={styles.subtitleCard2}>{info.lp}LP</Text>
+                                       {/*<Text style={styles.subtitleCard2Small}>LP</Text>*/}
+                                   </View>
+                               </View>}
+                       </View>
+                   );
+               })}
+           </View>
+         </ScrollView>
+     )
+   };
+
+   _renderSend=()=>{
+     return(
+         <View>
+           <View style={styles.Send}>
+             <Text style={styles.SendTitle}>Send</Text>
+             <Text style={styles.SendValue}>{this.state.list[0].send}LP</Text>
+           </View>
+           <View style={styles.Send}>
+             <Text style={styles.SendTitle}>Request</Text>
+             <Text style={styles.SendValue}>{this.state.list[0].request}LP</Text>
+           </View>
+         </View>
+     )
+   };
 
 const styles = StyleSheet.create({
   container: {
@@ -223,7 +249,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#fff',
     fontWeight: '300',
-    marginTop: 10
+    marginTop: px2dp(10)
   },
   footerSubtitle: {
     flexDirection: 'row'
