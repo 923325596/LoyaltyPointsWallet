@@ -12,7 +12,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import {WalletHeader, Icon} from '../../components/Bucks/index'
-
+import {Container,Content} from 'native-base'
 type Props = {};
 export default class Wallets extends Component<Props> {
 
@@ -37,12 +37,14 @@ export default class Wallets extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.container}>
+      <Container style={styles.container}>
+        <Content>
         {this._renderHreder()}
         {this._renderWallet()}
         {this._renderAddWallet()}
         {this._renderSend()}
-      </View>
+        </Content>
+      </Container>
     );
   }
 
