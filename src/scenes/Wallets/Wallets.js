@@ -35,17 +35,16 @@ export default class Wallets extends Component<Props> {
     // this.setState()
   }
 
-    render() {
-        return (
-            <View style={styles.container}>
-                {this._renderHreder()}
-                {this._renderWallet()}
-                {this._renderAddWallet()}
-                {this._renderSend()}
-            </View>
-        );
-    }
-}
+  render() {
+    return (
+      <View style={styles.container}>
+        {this._renderHreder()}
+        {this._renderWallet()}
+        {this._renderAddWallet()}
+        {this._renderSend()}
+      </View>
+    );
+  }
 
    _renderHreder=()=>{
        return (
@@ -127,6 +126,7 @@ export default class Wallets extends Component<Props> {
          </View>
      )
    };
+}
 
 const styles = StyleSheet.create({
   container: {
