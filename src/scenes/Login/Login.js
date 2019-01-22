@@ -93,7 +93,7 @@ export default class Login extends Component<Props> {
                         />
                         <Button
                             buttonStyle={styles.buttonMedia2}
-                            iconLeft={{name: 'twitter', color: '#fff', size: 16, marginRight: 5}}
+                            iconLeft={{name: 'twitter', color: Color.bg, size: 16, marginRight: 5}}
                             title='TWITTER'
                         />
                     </View>

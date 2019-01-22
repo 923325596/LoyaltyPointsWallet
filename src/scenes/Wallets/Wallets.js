@@ -25,134 +25,136 @@ export default class Wallets extends Component<Props> {
       list: [{'id': 1, 'name': 'My wallet 1', 'points': 'Loyalty Points', 'lp': '4.35', 'send': '2.23', 'request': '6.12'},
         {'id': 2, 'name': 'My wallet 2', 'points': 'Loyalty Points', 'lp': '3.45', 'send': '2.23', 'request': '6.11'}],
       // 当前选择wallet的索引
-      active: 0,
+      active: 0
     };
   }
 
-  debouncePress() {
-    // this.state.active = index
-    alert('1')
-    // this.setState()
+    // 高亮当前选中的卡片及更换数据
+    debouncePress=(index)=>{
+        alert(index)
+        this.setState = { 'active': index }
+    }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        {this._renderHreder()}
+        {this._renderWallet()}
+        {this._renderAddWallet()}
+        {this._renderSend()}
+      </View>
+    );
   }
 
-    _renderHeader=()=>{
-        return (
-            <View style={styles.header}>
-              <Text style={styles.headerTitle}>Total Balance</Text>
-              <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance + 'LP'}</Text>
-              <View style={styles.balance}>
-                <View style={styles.balanceValue}>
-                  <Image style={styles.icon1} source={Images.Img.icon_vasi} />
-                  <View style={styles.balanceAmount}>
-                    <Text style={styles.balanceTitle}>Request</Text>
-                    <Text style={styles.balanceSubtitle}>{this.state.userInfo.income + 'LP'}</Text>
-                  </View>
-                </View>
-                <View style={styles.balanceValue}>
-                  <Image style={styles.icon1} source={Images.Img.icon_paypal} />
-                  <View style={styles.balanceAmount}>
-                    <Text style={styles.balanceTitle}>Send</Text>
-                    <Text style={styles.balanceSubtitle}>{this.state.userInfo.expenses + 'LP'}</Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-        )
-    };
+   _renderHreder=()=>{
+       return (
+           <View style={styles.header}>
+             <Text style={styles.headerTitle}>Total Balance</Text>
+             <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance + 'LP'}</Text>
+             <View style={styles.balance}>
+               <View style={styles.balanceValue}>
+                 <Image style={styles.icon1} source={Images.Img.arrow_down} />
+                 <View style={styles.balanceAmount}>
+                   <Text style={styles.balanceTitle}>Request</Text>
+                   <Text style={styles.balanceSubtitle}>{this.state.userInfo.income + 'LP'}</Text>
+                 </View>
+               </View>
+               <View style={styles.balanceValue}>
+                 <Image style={styles.icon1} source={Images.Img.arrow_up} />
+                 <View style={styles.balanceAmount}>
+                   <Text style={styles.balanceTitle}>Send</Text>
+                   <Text style={styles.balanceSubtitle}>{this.state.userInfo.expenses + 'LP'}</Text>
+                 </View>
+               </View>
+             </View>
+           </View>
+       )
+   };
 
-    _renderWallet=()=>{
+   _renderWallet=()=>{
         return (
             <View style={styles.footerLine1}>
               <Text style={styles.leftText}>Wallets</Text>
               <Text style={styles.rightText}>Add Wallet</Text>
             </View>
         )
-    };
+   };
 
-    _renderAddWallet=()=>{
-        return(
-            <ScrollView style={styles.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
-              <View style={styles.footerLine2}>
-                  { this.state.list.map((info, index) => {
-                      return (
-                          <View>
-                              {this.state.active === index ?
-                                  <View style={styles.footerCard1} onPress={this.debouncePress}>
-                                    <Text style={styles.titleCard}>{info.name}</Text>
-                                    <Text style={styles.totalAmount}>{info.points}</Text>
-                                    <View style={styles.footerSubtitle}>
-                                      <Text style={styles.subtitleCard}>{info.lp}LP</Text>
-                                        {/*<Text style={styles.subtitleCardSmall}>LP</Text>*/}
-                                    </View>
-                                  </View> :
-                                  <View style={styles.footerCard2} onPress={this.debouncePress}>
-                                    <Text style={styles.titleCard2}>{info.name}</Text>
-                                    <Text style={styles.totalAmount2}>{info.points}</Text>
-                                    <View style={styles.footerSubtitle2}>
-                                      <Text style={styles.subtitleCard2}>{info.lp}LP</Text>
-                                        {/*<Text style={styles.subtitleCard2Small}>LP</Text>*/}
-                                    </View>
-                                  </View>}
-                          </View>
-                      );
-                  })}
-              </View>
-            </ScrollView>
-        )
-    };
+   _renderAddWallet=()=>{
+     return(
+       <View>
+         <ScrollView style={styles.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
+           <View style={styles.footerLine2}>
+               { this.state.list.map((info, index) => {
+                   return (
+                       <View>
+                           {this.state.active === index ?
+                               <View style={styles.footerCard1} onPress={this.debouncePress(index)}>
+                                   <Text style={styles.titleCard}>{info.name}</Text>
+                                   <Text style={styles.totalAmount}>{info.points}</Text>
+                                   <View style={styles.footerSubtitle}>
+                                       <Text style={styles.subtitleCard}>{info.lp}LP</Text>
+                                       {/*<Text style={styles.subtitleCardSmall}>LP</Text>*/}
+                                   </View>
+                               </View> :
+                               <View style={styles.footerCard2} onPress={this.debouncePress(index)}>
+                                   <Text style={styles.titleCard2}>{info.name}</Text>
+                                   <Text style={styles.totalAmount2}>{info.points}</Text>
+                                   <View style={styles.footerSubtitle2}>
+                                       <Text style={styles.subtitleCard2}>{info.lp}LP</Text>
+                                       {/*<Text style={styles.subtitleCard2Small}>LP</Text>*/}
+                                   </View>
+                               </View>}
+                       </View>
+                   );
+               })}
+           </View>
+         </ScrollView>
+       </View>
+     )
+   };
 
-    _renderSend=()=>{
-        return(
-            <View>
-              <View style={styles.Send}>
-                <Text style={styles.SendTitle}>Send</Text>
-                <Text style={styles.SendValue}>{this.state.list[0].send}LP</Text>
-              </View>
-              <View style={styles.Send}>
-                <Text style={styles.SendTitle}>Request</Text>
-                <Text style={styles.SendValue}>{this.state.list[0].request}LP</Text>
-              </View>
-            </View>
-        )
-    };
+   _renderSend=()=>{
+     return(
+         <View>
+           <View style={styles.Send}>
+             <Text style={styles.SendTitle}>Send</Text>
+             <Text style={styles.SendValue}>{this.state.list[0].send}LP</Text>
+           </View>
+           <View style={styles.Send}>
+             <Text style={styles.SendTitle}>Request</Text>
+             <Text style={styles.SendValue}>{this.state.list[0].request}LP</Text>
+           </View>
+         </View>
+     )
+   };
 
-    render() {
-        return (
-            <View style={styles.container}>
-                {this._renderHeader()}
-                {this._renderWallet()}
-                {this._renderAddWallet()}
-                {this._renderSend()}
-            </View>
-        );
-    }
+
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
     height: '100%',
-    marginTop: 50,
+    marginTop: px2dp(50),
   },
   // 用户总钱包卡片样式开始
   header: {
     flexDirection: 'column',
     backgroundColor: '#FFFFFF',
-    margin: 20,
-    borderRadius: 10,
-    padding: 20,
-    marginBottom: 30,
+    margin: px2dp(20),
+    borderRadius: px2dp(10),
+    padding: px2dp(20),
+    marginBottom: px2dp(30),
     shadowColor: '#78AEF9',
-    shadowOffset: { width: 0, height: 8 },
+    shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.5,
     shadowRadius: 15,
   },
   balance: {
     flexDirection: 'row',
-    height: 40,
+    height: px2dp(40),
   },
   balanceValue: {
     flexDirection: 'row',
@@ -171,8 +173,8 @@ const styles = StyleSheet.create({
     color: '#7BB0FD',
     fontSize: 32,
     fontWeight: '300',
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: px2dp(10),
+    marginBottom: px2dp(20),
   },
   balanceTitle: {
     color: '#8E959D',
@@ -187,29 +189,27 @@ const styles = StyleSheet.create({
   },
   icon1: {
     backgroundColor: 'rgba(255,255,255,0.24)',
-    borderRadius: 22,
-    width: 25,
-    height: 25,
+    width: px2dp(25),
+    height: px2dp(25),
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 8,
+    margin: px2dp(8),
   },
   // 用户总钱包卡片样式结束
 
   // 钱包卡片样式开始
   footerLine1: {
-    margin: 20,
+    margin: px2dp(20),
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
   scrollView: {
-    height: 100,
+    height: px2dp(150),
   },
   footerLine2: {
-    marginLeft: 20,
-    marginRight: 20,
-    flexDirection: 'row',
-    paddingBottom: 50,
+    marginLeft: px2dp(20),
+    marginRight: px2dp(20),
+    flexDirection: 'row'
   },
   leftText: {
     fontSize: 14,
@@ -222,25 +222,25 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   footerCard1: {
-    width: 180,
-    height: 110,
-    marginRight: 10,
+    width: px2dp(200),
+    height: px2dp(120),
+    marginRight: px2dp(10),
     backgroundColor: '#78AEF9',
     borderRadius: 6,
-    padding: 20,
+    padding: px2dp(20),
     shadowColor: '#78AEF9',
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.6,
     shadowRadius: 15,
   },
   footerCard2: {
-    width: 180,
-    height: 110,
-    marginRight: 10,
+    width: px2dp(200),
+    height: px2dp(120),
+    marginRight: px2dp(10),
     backgroundColor: '#EEF3F8',
     borderRadius: 6,
-    padding: 20,
-    marginLeft: 10,
+    padding: px2dp(20),
+    marginLeft: px2dp(10),
   },
   titleCard: {
     fontSize: 16,
@@ -257,15 +257,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   subtitleCard: {
-    marginRight: 10,
-    marginTop: 10,
+    marginRight: px2dp(10),
+    marginTop: px2dp(10),
     fontSize: 24,
     color: '#fff',
     fontWeight: 'normal'
   },
   subtitleCardSmall: {
-    marginRight: 10,
-    marginTop: 10,
+    marginRight: px2dp(10),
+    marginTop: px2dp(10),
     fontSize: 14,
     color: '#fff',
     fontWeight: 'normal'
@@ -279,21 +279,21 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#595F66',
     fontWeight: '300',
-    marginTop: 10
+    marginTop: px2dp(10)
   },
   footerSubtitle2: {
     flexDirection: 'row'
   },
   subtitleCard2: {
-    marginRight: 10,
-    marginTop: 10,
+    marginRight: px2dp(10),
+    marginTop: px2dp(10),
     fontSize: 24,
     color: '#8D959D',
     fontWeight: 'normal'
   },
   subtitleCard2Small: {
-    marginRight: 10,
-    marginTop: 10,
+    marginRight: px2dp(10),
+    marginTop: px2dp(10),
     fontSize: 14,
     color: '#8D959D',
     fontWeight: 'normal'
@@ -302,21 +302,22 @@ const styles = StyleSheet.create({
 
   // 钱包详细信息样式开始
   Send: {
-    margin: 20,
+    margin: px2dp(20),
     justifyContent: 'space-between',
     flexDirection: 'row',
     borderBottomWidth: 1,
-    paddingBottom: 21,
+    paddingBottom: px2dp(21),
     borderColor: '#CED4DA',
   },
   SendTitle: {
+    marginLeft: px2dp(10),
     fontSize: 14,
-    color: '#8D959D',
+    color: '#596067',
     fontWeight: 'normal'
   },
   SendValue: {
     fontSize: 14,
-    color: '#8D959D',
+    color: '#596067',
     fontWeight: 'normal'
   }
   // 钱包详细信息样式结束
