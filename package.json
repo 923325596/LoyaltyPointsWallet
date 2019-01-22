@@ -10,17 +10,18 @@
   },
   "dependencies": {
     "@remobile/react-native-toast": "^1.0.6",
-    "native-base": "^2.3.2",
     "immutable": "^3.8.2",
-    "react-native-calendars": "^1.7.1",
-    "react-native-side-menu": "^1.0.2",
-    "react-native-tab-navigator": "^0.3.3",
-    "react-native-pathjs-charts": "https://github.com/capitalone/react-native-pathjs-charts",
-    "react-native-svg": "^5.4.2",
-    "react-native-vector-icons": "^4.4.0",
+    "native-base": "^2.3.2",
     "react": "16.6.3",
     "react-native": "0.57.8",
-    "react-native-router-flux": "4.0.6"
+    "react-native-calendars": "^1.7.1",
+    "react-native-i18n": "^2.0.15",
+    "react-native-pathjs-charts": "https://github.com/capitalone/react-native-pathjs-charts",
+    "react-native-router-flux": "4.0.6",
+    "react-native-side-menu": "^1.0.2",
+    "react-native-svg": "^5.4.2",
+    "react-native-tab-navigator": "^0.3.3",
+    "react-native-vector-icons": "^4.4.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.2.3",
