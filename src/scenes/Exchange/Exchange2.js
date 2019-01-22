@@ -8,15 +8,21 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {Button, List} from 'react-native-bucks';
+import {StyleSheet, View, Alert, TouchableHighlight, Text, Platform, ScrollView, Dimensions} from 'react-native';
 
 type Props = {};
-export default class Exchange2 extends Component<Props> {
-
+export default class Exchange extends Component<Props> {
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
             <View style={styles.container}>
                 <Text style={{fontSize:FONT_SIZE(20),color:Color.Tabtext}}>Exchange</Text>
                 <Text onPress={Actions.login} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我去登录</Text>
+                <List></List>
+                <Button>PAY</Button>
             </View>
         );
     }
