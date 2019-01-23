@@ -13,5 +13,12 @@ export  default {
       forminput2: "Integral number",
       forminput3: "Please fill in the notes",
       ButtonOk: 'Ok',
-    }
+    },
+  Wallets: {
+    TotalBalance: "bilanzsumme",
+    Request: "antrag",
+    Send: "schick",
+    Wallets: "taschen",
+    AddWallet: "addwallet"
+  }
 }

@@ -13,5 +13,12 @@ export  default {
         forminput: "收款人名称",
         forminput2: "Integral number",
         forminput3: "Please fill in the notes",
-    }
+    },
+  Wallets: {
+    TotalBalance: "总余额",
+    Request: "请求",
+    Send: "发送",
+    Wallets: "钱包",
+    AddWallet: "新增钱包"
+  }
 }

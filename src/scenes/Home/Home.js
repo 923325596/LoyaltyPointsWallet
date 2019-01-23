@@ -12,7 +12,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import I18njson from '../../components/I18n/I18nforjson';
+import I18njs from '../../components/I18n/I18forJs';
 
 
 type Props = {};
@@ -33,8 +33,8 @@ export default class Home extends Component<Props> {
                     <View style={{height:50,width:100}}>
 
                     </View>
-                    <Text>{I18njson.t('helloworld')}</Text>
-                    <Text>{I18njson.t('send')}</Text>
+                    <Text>{I18njs.t('Tab.helloworld')}</Text>
+                    <Text>{I18njs.t('Tab.send')}</Text>
                 </View>
             </View>
         );

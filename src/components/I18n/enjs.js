@@ -16,5 +16,12 @@ export  default {
         formLabel2: 'Number',
         formLabel3: 'Notes',
         ButtonOk: 'Ok',
-    }
+    },
+  Wallets: {
+    TotalBalance: "Total Balance",
+    Request: "Request",
+    Send: "Send",
+    Wallets: "Wallets",
+    AddWallet: "Add Wallet"
+  }
 }
