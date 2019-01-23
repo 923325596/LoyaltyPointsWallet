@@ -7,7 +7,8 @@
  */
 
 import React, {Component} from 'react';
-import {Image,SectionList,Button,StyleSheet,Text,TouchableOpacity, View,ScrollView,FlatList} from 'react-native';
+import {Image,SectionList,StyleSheet,Text,TouchableOpacity, View,ScrollView} from 'react-native';
+import I18njs from "../../components/I18n/I18forJs";
 
 type Props = {};
 export default class ExchangeRest extends Component<Props> {
