@@ -32,7 +32,7 @@ export default class Exchange2 extends Component<Props> {
                 <View style={{marginRight:20}}>
                     <Image 
                     style={{width:60,height:60,borderRadius:30}}
-                    source={require("../imgs/111.png")}></Image>
+                    source={require("../img/EXCHANGE.png")}></Image>
                 </View>
                 <View style={myStyles.myCol}>
                     <Text style={{fontSize:18,color:'#33383d',lineHeight:19}}>{info.item.content}</Text>
@@ -59,7 +59,7 @@ export default class Exchange2 extends Component<Props> {
                     <View style={{marginRight:20}}>
                         <Image 
                         style={{width:80,height:80,borderRadius:40}}
-                        source={require("../imgs/toux.png")}></Image>                    
+                        source={require("../img/EXCHANGE.png")}></Image>                    
                     </View>
                     <View style={myStyles.myCol}>
                         <Text style={{fontSize:16,color:'#2f3236',lineHeight:22}}>weiwei</Text>  
