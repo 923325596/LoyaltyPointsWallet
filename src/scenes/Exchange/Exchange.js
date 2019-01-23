@@ -7,10 +7,42 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Image,FlatList,Button,StyleSheet,Text,TouchableOpacity, View} from 'react-native';
 
 type Props = {};
 export default class Exchange2 extends Component<Props> {
+    constructor(){
+        super();
+        this.state={
+            todaylist:[
+                {id:1,content:"1.14LP",cla:"欧元",times:'11:24',dater:'2019.1.16'}
+            ],
+            yesterdaylist:[
+                {id:1,content:"1.34LP",cla:"欧元",times:'7:24',dater:'2019.1.15'},
+                {id:2,content:"1.66LP",cla:"欧元",times:'8:40',dater:'2019.1.15'},
+                {id:3,content:"1.28LP",cla:"欧元",times:'8:40',dater:'2019.1.15'},
+                {id:4,content:"1.14LP",cla:"欧元",times:'8:40',dater:'2019.1.15'}
+            ]
+        }
+
+    }
+    showItem=(info)=>{
+        return <TouchableOpacity 
+            style={{flexDirection:'row',height:100,padding:10}}>
+                <View style={{marginRight:20}}>
+                    <Image 
+                    style={{width:60,height:60,borderRadius:30}}
+                    source={require("../imgs/111.png")}></Image>
+                </View>
+                <View style={myStyles.myCol}>
+                    <Text style={{fontSize:18,color:'#33383d',lineHeight:19}}>{info.item.content}</Text>
+                    <Text>{info.item.cla}</Text>
+                </View>
+                <View style={myStyles.myCol}>
+                    <Text>{info.item.times}</Text>
+                </View>
+            </TouchableOpacity>       
+      }     
 
     render() {
         return (
@@ -34,7 +66,7 @@ export default class Exchange2 extends Component<Props> {
                         <Text>weiwei@gmail.com</Text>                 
                     </View> 
                     <TouchableOpacity style={{borderRadius:3,borderColor:'#6ad9e1',borderWidth:1, width:78,height:30,paddingLeft:10}}>
-                        <Text style={{fontSize:12,lineHeight:22}}>切换用户</Text>                    
+                        <Text style={{fontSize:12,lineHeight:22}}>EXCHANGE</Text>                    
                     </TouchableOpacity>
                     
                 </View>
@@ -103,4 +135,11 @@ const styles = StyleSheet.create({
     },
 
 });
-
+var myStyles = StyleSheet.create({
+    myCol:{
+      flex:1,
+      justifyContent:'center',
+      alignItems:'stretch',     
+      
+    }
+  })
