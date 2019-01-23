@@ -37,7 +37,16 @@ import Request from '../scenes/Request/Request'
 import TabIcon from '../components/TabIcon/TabIcon';
 
 //登录
-import Login from '../scenes/Login/Login';
+// import Login from '../scenes/Login/Login';
+
+
+// 开始登录
+import Login from '../scenes/Login/Login'
+import LoginEmail from '../scenes/Login/LoginEmail'
+import LoginRegEmail from '../scenes/Login/LoginRegEmail'
+import LoginRegPhone from '../scenes/Login/LoginRegPhone'
+
+
 //忘记密码
 import ForgetPSW from '../scenes/Login/ForgetPSW';
 //登录成功
@@ -172,6 +181,47 @@ export default class Root_Router extends Component<Props> {
                             // backButtonImage={require('../img/icon_class_n.png')}
                             leftButtonIconStyle={[styles.leftIconStyle]}
                         />
+
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="loginemail"
+                            component={LoginEmail}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="loginregemail"
+                            component={LoginRegEmail}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="loginregphone"
+                            component={LoginRegPhone}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+
                         <Scene
                             navigationBarStyle={[styles.navigationBarStyle]}
                             titleStyle={[styles.titleStyle]}

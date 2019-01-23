@@ -9,7 +9,6 @@ import { Content, Container } from 'native-base'
 import {Icon, Button, FormLogin, colors} from '../../components/Bucks/index';
 import FormLabel from "../../components/Bucks/form/FormLabel";
 import FormInput from "../../components/Bucks/form/FormInput";
-import I18njs from '../../components/I18n/I18forJs';
 // import Icon from '../../components/Bucks/icons/Icon'
 //
 // import Button from '../../components/Bucks/buttons/Button'
@@ -54,6 +53,7 @@ export default class Login extends Component<Props> {
                 <Content>
                     {this._loginTitleHandle()}
                     {this._emailAddressHandle()}
+                    {this._verificationCode()}
                     {this._emailPassword()}
                     {this._emailButton()}
                     {this._emailPhoneSign()}
@@ -121,8 +121,8 @@ export default class Login extends Component<Props> {
      */
     _loginTitleHandle=()=>{
         return (
-            <View style={styles.loginContentView}>
-                <Text style={styles.loginTitleHandle}>{I18njs.t('login.title')}</Text>
+            <View style={[styles.loginContentView, {marginLeft: px2dp(16)}]}>
+                <Text style={styles.loginTitleHandle}>Sign up by email</Text>
                 <Text style={styles.titleHeader}></Text>
             </View>
         )
@@ -133,7 +133,22 @@ export default class Login extends Component<Props> {
     _emailAddressHandle=()=>{
         return (
             <View style={[styles.emailBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder={I18njs.t('login.address')} />
+                <FormInput style={styles.emailInput} placeholder='Your email address' />
+            </View>
+        )
+    }
+    /**
+     * 邮箱验证
+     */
+    _verificationCode=()=>{
+        return (
+            <View style={[styles.emailCodeBox, styles.contentCommon]}>
+                <FormInput style={styles.emailInput} placeholder='Verification Code' />
+                <Button
+                    buttonStyle={styles.emailInputButton}
+                    title='GET'
+                    color="#65D9E2"
+                />
             </View>
         )
     }
@@ -143,7 +158,7 @@ export default class Login extends Component<Props> {
     _emailPassword=()=>{
         return (
             <View style={[styles.emailPasswordBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder={I18njs.t('login.password')} />
+                <FormInput style={styles.emailInput} placeholder='Password' />
             </View>
         )
     }
@@ -155,19 +170,18 @@ export default class Login extends Component<Props> {
             <View style={styles.contentCommon}>
                 <Button
                     buttonStyle={styles.emailButtonBox}
-                    title={I18njs.t('login.button')}
+                    title='SIGN UP'
                 />
             </View>
         )
     }
     /**
-     * 登录方式
+     * 手机号登录
      */
     _emailPhoneSign=()=>{
         return (
-            <View style={styles.contentCenterTop}>
-                <Text style={styles.emailTextSign}>{I18njs.t('login.signLeftBotton')}</Text>
-                <Text style={styles.emailTextForgot}>{I18njs.t('login.signRightButton')}</Text>
+            <View style={{marginLeft: px2dp(16)}}>
+                <Text style={styles.emailTextSign}>Sign up by phone</Text>
             </View>
         )
     }
@@ -187,7 +201,7 @@ const styles = StyleSheet.create({
     },
     loginContentView: {
         paddingTop: px2dp(22),
-        marginLeft: px2dp(16),
+        marginLeft: px2dp(8),
     },
     loginTitleHandle: {
         fontFamily: 'PingFangSC-Regular',
@@ -237,6 +251,14 @@ const styles = StyleSheet.create({
         shadowColor: '#6AD9E1',
         shadowOpacity: 0.24,
     },
+    emailTextSign: {
+        fontSize: 12,
+        lineHeight: 18,
+        color: '#78AEF9',
+        textAlign: 'left',
+        marginTop:px2dp(20),
+        fontFamily: 'PingFangSC-Regular',
+    },
     emailInputButton: {
         backgroundColor: '#ffffff',
         borderStyle: 'solid',
@@ -250,33 +272,76 @@ const styles = StyleSheet.create({
         right: 0,
         zIndex: 3,
     },
-
-
-    contentCenterTop: {
-        width: 325,
-        marginLeft: px2dp(16),
-        flexDirection:'row', //主轴水平，起点在左，默认值
-        flexWrap:'nowrap',   // 不换行， 默认
-        justifyContent:'flex-start', // 左对齐，默认值
-        flex:1, //只看中比例，不看重实际数值
+    /*container: {
+        backgroundColor: 'white',
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
     },
-    emailTextSign: {
-        width: 150,
-        fontSize: 12,
-        lineHeight: 18,
+    iconStyle: {
+        paddingLeft: 20,
+        paddingTop: 30,
+        width: 80,
+        height: 60
+    },
+    header: {
+        borderBottomWidth: 2,
+        borderColor: '#78AEF9',
+        marginTop: 40,
+        marginBottom: 40,
+        width: 55,
+        paddingBottom: 5,
+        marginLeft: 20,
+    },
+    headerText: {
+        color: '#33383D',
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    accountInfo: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        marginLeft: 0,
+        marginRight: 20,
+        height: 72,
+    },
+    accountDetail: {
         color: '#78AEF9',
-        textAlign: 'left',
-        marginTop:px2dp(20),
-        fontFamily: 'PingFangSC-Regular',
-    },
-    emailTextForgot: {
-        width: 155,
         fontSize: 12,
-        lineHeight: 18,
-        color: '#78AEF9',
-        textAlign: 'right',
-        marginTop:px2dp(20),
-        fontFamily: 'PingFangSC-Regular',
+        fontWeight: 'bold',
+    },
+    footer: {
+        marginBottom: 40,
+        flexDirection: 'column',
+    },
+    footerText: {
+        margin: 18,
+        textAlign: 'center',
+        color: '#727D88',
+        fontSize: 12,
+    },
+    socialButtons: {
+        flexDirection: 'row',
+        display: 'flex',
+        justifyContent: 'space-between'
     },
 
+    buttonMedia1: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 160,
+    },
+    buttonMedia2: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 160,
+        backgroundColor: '#65C6F0',
+    },
+    textSocial: {
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 10,
+    },*/
 });
