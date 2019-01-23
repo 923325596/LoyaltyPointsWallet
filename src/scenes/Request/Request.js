@@ -11,7 +11,8 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
-
+import {Icon, Button, FormLogin} from '../../components/Bucks/index';
+import I18njs from "../../components/I18n/I18forJs";
 type Props = {};
 export default class Request extends Component<Props> {
 
@@ -21,18 +22,44 @@ export default class Request extends Component<Props> {
                 {/*//二维码大方块*/}
                 <View style={styles.fangkuai}>
                     <View style={styles.fangkuaitou}>
-                        <Image style={styles.fangkuaitou1} source={require('../../components/Bucks/images/visa.png')} />
-                        <Text style={styles.fangkuaitou2}>QR</Text>
-                        <Text style={styles.fangkuaitou3}>code111111111git </Text>
+                        <Image style={styles.fangkuaitou1} source={Images.Img.Purse} />
+                        <Text style={styles.fangkuaitou2}>{I18njs.t('Request.qr')}</Text>
+                        <Text style={styles.fangkuaitou3}>{I18njs.t('Request.code')}</Text>
+                    </View>
+                    <View style={styles.fnagkuai4}>
+                        <Text>{I18njs.t('Request.wait')}...</Text>
+                    </View>
+                    <View style={styles.fnagkuai5}>
+                        <Image style={styles.fnagkuai6} source={Images.Img.Purse} />
+                    </View>
+                    <View style={styles.fnagkuai7}>
+                        <Text style={styles.fnagkuai9}>{I18njs.t('Request.set')}</Text>
+                        <Text style={styles.fnagkuai8}>|</Text>
+                        <Text style={styles.fnagkuai9}>{I18njs.t('Request.preseve')}</Text>
                     </View>
                 </View>
                 {/*第二部分*/}
                 <View style={styles.dierbu}>
-
+                    <Image style={styles.dierbu2} source={Images.Img.number} />
+                    <Text style={styles.dierbu1}>{I18njs.t('Request.id')}</Text>
                 </View>
                 {/*第三部分*/}
                 <View style={styles.disanbu}>
-
+                    <Text style={styles.disanbu1}> 4HK34H3H34H2HH23H4</Text>
+                    <View style={styles.disanbu2}>
+                        <Button
+                            buttonStyle={styles.disanbu3}
+                            iconLeft={{name: '', color: '#fff', size: 16,}}
+                            title={I18njs.t('Request.copy')}
+                        />
+                        <Button
+                            buttonStyle={styles.disanbu4}
+                            iconLeft={{name: '', color: '#fff', size: 16,}}
+                            title={I18njs.t('Request.share')}
+                        />
+                        <Image style={styles.disanbu5} source={Images.Img.copy} />
+                        <Image style={styles.disanbu6} source={Images.Img.share} />
+                    </View>
                 </View>
             </View>
         );
@@ -45,44 +72,140 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#78AEF9',
+        paddingTop: px2dp(8),
     },
     fangkuai:{
-        width:327,
-        height:320,
+        width:300,
+        height:300,
         backgroundColor: '#FFFFFF',
+        borderRadius:5,
     },
     fangkuaitou:{
         width:300,
-        height:60,
+        height:50,
+        paddingTop: px2dp(15),
         backgroundColor: '#CED4DA',
         textAlign: 'left',
         flexDirection: 'row',
+        color:'#5B6069',
     },
     fangkuaitou1:{
         marginLeft: px2dp(10),
-        paddingTop: px2dp(10),
+        fontSize:13,
         borderRadius: 22,
         width: 25,
         height: 25,
     },
     fangkuaitou2:{
         marginLeft: px2dp(10),
-        fontSize: 14,
+        fontSize: 16,
     },
     fangkuaitou3:{
         marginLeft: px2dp(10),
-        fontSize: 14,
+        fontSize: 16,
+    },
+    fnagkuai4:{
+        height:40,
+        width:300,
+        fontSize:14,
+        paddingTop: px2dp(8),
+        justifyContent: 'center',
+        alignItems: 'center',
+        color:'#5B6069',
+    },
+    fnagkuai5:{
+        width:300,
+        height:150,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    fnagkuai6:{
+        width:150,
+        height:150,
+        backgroundColor: '#CED4DA',
+        fontSize:17,
+    },
+    fnagkuai7:{
+        flexDirection: 'row',
+        marginTop: px2dp(20),
+        fontSize:14,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    fnagkuai8:{
+      marginLeft:  px2dp(18),
+      marginRight:  px2dp(18),
+      color:'#EEEEEE',
+    },
+    fnagkuai9:{
+        color:'#78AEF9',
     },
     dierbu:{
-        marginTop: px2dp(25),
-        width:327,
-        height:50,
-        backgroundColor: '#A2C8FC',
+        width:375,
+        height:48,
+        backgroundColor: '#6EA5F1',
+        marginTop: px2dp(18),
+        paddingLeft:px2dp(32),
+        paddingTop:px2dp(15),
+        flexDirection: 'row',
+    },
+    dierbu1:{
+        marginLeft:px2dp(10),
+        color:'#FFFFFF',
+        fontSize:16,
+    },
+    dierbu2:{
+        marginLeft: px2dp(10),
+        fontSize:10,
+        width:25,
+        height:18,
     },
     disanbu:{
-        marginTop: px2dp(5),
-        width:327,
-        height:130,
-        backgroundColor: '#A2C8FC',
+        marginTop: px2dp(1),
+        width:400,
+        height:140,
+        backgroundColor: '#6EA5F1',
+        alignItems: 'center',
+    },
+    disanbu1:{
+      fontSize:18,
+      color:'#FFFFFF',
+      paddingTop:px2dp(25),
+    },
+    disanbu2:{
+        marginTop:px2dp(25),
+        width:375,
+        flexDirection: 'row',
+        position:'relative',
+    },
+    disanbu3:{
+        width:145,
+        height:34,
+        fontSize:11,
+        borderColor:'#FFFFFF',
+        marginLeft:px2dp(10),
+    },
+    disanbu4:{
+        width:151,
+        height:34,
+        fontSize:11,
+        borderColor:'#FFFFFF',
+        // marginLeft:px2dp(10),
+    },
+    disanbu5:{
+        fontSize:13,
+        width: 20,
+        height: 20,
+        position:'absolute',
+        top:px2dp(6),
+        left:px2dp(47),
+    },
+    disanbu6:{
+        fontSize:13,
+        width: 20,
+        height: 20,
+        position:'absolute',
+        top:px2dp(6),
+        left:px2dp(223),
     }
 });

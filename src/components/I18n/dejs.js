@@ -13,5 +13,22 @@ export  default {
       forminput2: "Integral number",
       forminput3: "Please fill in the notes",
       ButtonOk: 'Ok',
-    }
+    },
+  Wallets: {
+    TotalBalance: "bilanzsumme",
+    Request: "antrag",
+    Send: "schick",
+    Wallets: "taschen",
+    AddWallet: "addwallet"
+  },
+  Request:{
+        qr: "qr",
+        code:"code",
+        set :"set.",
+        wait:"warten auf zahlungen",
+        preseve:"qr - code erhalten",
+        id:"antrag -",
+        copy:"kopieren",
+        share:"anteil",
+  },
 }
