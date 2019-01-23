@@ -117,6 +117,7 @@ const onBackPress = () => {
     Actions.pop();
     return true
 };
+
 type Props = {};
 export default class Root_Router extends Component<Props> {
     async componentDidMount() {
@@ -127,9 +128,7 @@ export default class Root_Router extends Component<Props> {
         global.closeLoading = function () {
             self.Loading.close();
         };
-
     }
-
 
     render() {
         return (
@@ -216,7 +215,6 @@ export default class Root_Router extends Component<Props> {
                                    icon={TabIcon}
                                    component={Exchange}
                             />
-
                         </Tabs>
                     </Scene>
                 </Router>
@@ -224,7 +222,6 @@ export default class Root_Router extends Component<Props> {
             </Root>
         )
     }
-
 };
 /*titleStyle={{backgroundColor:'#ff0000',color:'#00ff00'}}标题Leaguer
  左标题style leftButtonStyle={{backgroundColor:'#00ff00',color:'#00ff00'}}
