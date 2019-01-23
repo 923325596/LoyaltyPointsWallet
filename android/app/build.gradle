@@ -95,7 +95,11 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+<<<<<<< HEAD
     buildToolsVersion '28.0.3'
+=======
+    buildToolsVersion '28.0.2'
+>>>>>>> 5c08ef31cb63501a79db9de4220f55a9b080d40a
 
     defaultConfig {
         applicationId "com.loyaltypointswallet"
@@ -137,7 +141,8 @@ android {
 }
 
 dependencies {
-    compile project(':@remobile_react-native-toast')
+    implementation project(':react-native-i18n')
+    implementation project(':@remobile_react-native-toast')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules

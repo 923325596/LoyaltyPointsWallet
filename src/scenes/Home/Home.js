@@ -12,19 +12,30 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-    android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import I18njson from '../../components/I18n/I18nforjson';
+
 
 type Props = {};
 export default class Home extends Component<Props> {
+
+    state = { languages: [] };
+
+    componentWillMount() {
+
+    }
+
     render() {
         return (
             <View style={styles.container}>
                <Text onPress={()=>Actions.tabbar({type: ActionConst.RESET})}>点我跳转到首页tab</Text>
+                <View style={styles.block}>
+
+                    <View style={{height:50,width:100}}>
+
+                    </View>
+                    <Text>{I18njson.t('helloworld')}</Text>
+                    <Text>{I18njson.t('send')}</Text>
+                </View>
             </View>
         );
     }
@@ -46,5 +57,17 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#333333',
         marginBottom: 5,
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: '700',
+        marginBottom: 8,
+    },
+    block: {
+        marginBottom: 16,
+    },
+    label: {
+        fontWeight: '700',
+        marginRight: 8,
     },
 });
