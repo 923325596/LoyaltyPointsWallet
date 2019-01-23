@@ -6,5 +6,12 @@ export  default {
     Tab: {
         helloworld: "hallowelt",
         send:'schick'
+    },
+    // send 德语
+    deSend: {
+      forminput: "Die namen der empfänger",
+      forminput2: "Integral number",
+      forminput3: "Please fill in the notes",
+      ButtonOk: 'Ok',
     }
 }
