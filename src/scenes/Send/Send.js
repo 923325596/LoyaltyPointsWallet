@@ -14,7 +14,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Icon, Button, FormLogin} from '../../components/Bucks/index';
 import FormInput from '../../components/Bucks/form/FormInput';
 import FormLabel from '../../components/Bucks/form/FormLabel';
-//import I18njs from '../../components/I18n/I18forJs';
+import I18njs from '../../components/I18n/I18forJs';
 type Props = {};
 export default class Send extends Component<Props> {
 
@@ -29,24 +29,6 @@ export default class Send extends Component<Props> {
         {this._renderViewOk3()}
         {/*发送按钮*/}
         {this._rendersocialButtons()}
-
-        {/*<Text>{I18njs.t('Tab.helloworld')}</Text>*/}
-        {/*<Text>{I18njs.t('Tab.send')}</Text>*/}
-
-        {/*<FormLogin*/}
-        {/*label='Name'*/}
-        {/*loginStyle={styles.FormLogin1}*/}
-        {/*FormLoginStyle={styles.FormLogin1}*/}
-        {/*placeholder='Name of the payee' />*/}
-
-        {/*<FormLogin*/}
-        {/*label='Number'*/}
-        {/*placeholder='Integral number' />*/}
-
-        {/*<FormLogin*/}
-        {/*label='Notes'*/}
-        {/*placeholder='Please fill in the notes' />*/}
-
       </View>
     );
   }
@@ -55,12 +37,11 @@ export default class Send extends Component<Props> {
     return (
       <View style={styles.ViewOk}>
         <FormLabel labelStyle={styles.TextSize}>
-          Name
-          {/*<Text style={}> 注册</Text>*/}
+          {I18njs.t('deSend.formLabel')}
         </FormLabel>
         <FormInput
           // onSuccess={true}
-          placeholder="Name of the payee"
+          placeholder={I18njs.t('deSend.forminput')}
           containerStyle={styles.FormInputs} />
       </View>
     )
@@ -70,12 +51,12 @@ export default class Send extends Component<Props> {
     return (
       <View style={styles.ViewOk2}>
         <FormLabel labelStyle={styles.TextSize}>
-          Number
+          {I18njs.t('deSend.formLabel2')}
           {/*<Text style={}> 注册</Text>*/}
         </FormLabel>
         <FormInput
           // onSuccess={true}
-          placeholder="Integral number"
+          placeholder={I18njs.t('deSend.forminput2')}
           containerStyle={styles.FormInputs} />
       </View>
     )
@@ -85,12 +66,11 @@ export default class Send extends Component<Props> {
     return (
       <View style={styles.ViewOk3}>
         <FormLabel labelStyle={styles.TextSize}>
-          Notes
-          {/*<Text style={}> 注册</Text>*/}
+          {I18njs.t('deSend.formLabel3')}
         </FormLabel>
         <FormInput
           // onSuccess={true}
-          placeholder="Please fill in the notes"
+          placeholder={I18njs.t('deSend.forminput3')}
           containerStyle={styles.FormInputs} />
       </View>
     )
@@ -101,7 +81,7 @@ export default class Send extends Component<Props> {
       <View style={styles.socialButtons}>
         <Button
           buttonStyle={styles.buttonStyle}
-          title='OK'/>
+          title={I18njs.t('deSend.ButtonOk')}/>
       </View>
     )
   }
@@ -150,16 +130,21 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 4,
   },
   TextSize: {
+    padding:0,
+    width:75,
     color: '#2F3236',
     fontSize: 20,
+    // backgroundColor: 'blue',
     marginTop:px2dp(-6),
     fontWeight: '200',
   },
   FormInputs: {
-    flex:4,
+    flex: 1,
+    padding:0,
     justifyContent: 'center',
     fontSize:18,
     color: "#8F96A1",
+    // backgroundColor: 'red',
   },
   socialButtons: {
     flexDirection: 'row',
@@ -175,7 +160,6 @@ const styles = StyleSheet.create({
     height: 40,
     width:311,
     backgroundColor:'#6AE1C4',
-    fontSize:16,
     borderRadius:5,
   }
 });

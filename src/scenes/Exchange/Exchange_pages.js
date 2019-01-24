@@ -14,7 +14,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import {Icon, Button, FormLogin} from '../../components/Bucks/index';
 import FormLabel from '../../components/Bucks/form/FormLabel';
 import ListItem from '../../components/Bucks/list/ListItem';
-//import I18njs from '../../components/I18n/I18forJs';
+import I18njs from "../../components/I18n/I18forJs";
 type Props = {};
 export default class ExchangePages extends Component<Props> {
 

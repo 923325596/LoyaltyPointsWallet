@@ -37,7 +37,16 @@ import Request from '../scenes/Request/Request'
 import TabIcon from '../components/TabIcon/TabIcon';
 
 //登录
-import Login from '../scenes/Login/Login';
+// import Login from '../scenes/Login/Login';
+
+
+// 开始登录
+import Login from '../scenes/Login/Login'
+import LoginEmail from '../scenes/Login/LoginEmail'
+import LoginRegEmail from '../scenes/Login/LoginRegEmail'
+import LoginRegPhone from '../scenes/Login/LoginRegPhone'
+
+
 //忘记密码
 import ForgetPSW from '../scenes/Login/ForgetPSW';
 //登录成功
@@ -120,6 +129,7 @@ const onBackPress = () => {
     Actions.pop();
     return true
 };
+
 type Props = {};
 export default class Root_Router extends Component<Props> {
     async componentDidMount() {
@@ -130,9 +140,7 @@ export default class Root_Router extends Component<Props> {
         global.closeLoading = function () {
             self.Loading.close();
         };
-
     }
-
 
     render() {
         return (
@@ -174,6 +182,47 @@ export default class Root_Router extends Component<Props> {
                             // backButtonImage={require('../img/icon_class_n.png')}
                             leftButtonIconStyle={[styles.leftIconStyle]}
                         />
+
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="loginemail"
+                            component={LoginEmail}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="loginregemail"
+                            component={LoginRegEmail}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="loginregphone"
+                            component={LoginRegPhone}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+
                         <Scene
                             navigationBarStyle={[styles.navigationBarStyle]}
                             titleStyle={[styles.titleStyle]}
@@ -244,7 +293,6 @@ export default class Root_Router extends Component<Props> {
                                    icon={TabIcon}
                                    component={Exchange}
                             />
-
                         </Tabs>
                     </Scene>
                 </Router>
@@ -252,7 +300,6 @@ export default class Root_Router extends Component<Props> {
             </Root>
         )
     }
-
 };
 /*titleStyle={{backgroundColor:'#ff0000',color:'#00ff00'}}标题Leaguer
  左标题style leftButtonStyle={{backgroundColor:'#00ff00',color:'#00ff00'}}

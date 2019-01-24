@@ -11,8 +11,9 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
-import {WalletHeader, Icon} from '../../components/Bucks/index'
 import {Container,Content} from 'native-base'
+import I18njs from '../../components/I18n/I18forJs'
+
 type Props = {};
 export default class Wallets extends Component<Props> {
 
@@ -51,20 +52,20 @@ export default class Wallets extends Component<Props> {
    _renderHreder=()=>{
        return (
            <View style={styles.header}>
-             <Text style={styles.headerTitle}>Total Balance</Text>
+             <Text style={styles.headerTitle}>{I18njs.t('Wallets.TotalBalance')}</Text>
              <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance + 'LP'}</Text>
              <View style={styles.balance}>
                <View style={styles.balanceValue}>
                  <Image style={styles.icon1} source={Images.Img.arrow_down} />
                  <View style={styles.balanceAmount}>
-                   <Text style={styles.balanceTitle}>Request</Text>
+                   <Text style={styles.balanceTitle}>{I18njs.t('Wallets.Request')}</Text>
                    <Text style={styles.balanceSubtitle}>{this.state.userInfo.income + 'LP'}</Text>
                  </View>
                </View>
                <View style={styles.balanceValue}>
                  <Image style={styles.icon1} source={Images.Img.arrow_up} />
                  <View style={styles.balanceAmount}>
-                   <Text style={styles.balanceTitle}>Send</Text>
+                   <Text style={styles.balanceTitle}>{I18njs.t('Wallets.Send')}</Text>
                    <Text style={styles.balanceSubtitle}>{this.state.userInfo.expenses + 'LP'}</Text>
                  </View>
                </View>
@@ -76,8 +77,8 @@ export default class Wallets extends Component<Props> {
    _renderWallet=()=>{
         return (
             <View style={styles.footerLine1}>
-              <Text style={styles.leftText}>Wallets</Text>
-              <Text style={styles.rightText}>Add Wallet</Text>
+              <Text style={styles.leftText}>{I18njs.t('Wallets.Wallets')}</Text>
+              <Text style={styles.rightText}>{I18njs.t('Wallets.AddWallet')}</Text>
             </View>
         )
    };
@@ -120,11 +121,11 @@ export default class Wallets extends Component<Props> {
      return(
          <View>
            <View style={styles.Send}>
-             <Text style={styles.SendTitle}>Send</Text>
+             <Text style={styles.SendTitle}>{I18njs.t('Wallets.Send')}</Text>
              <Text style={styles.SendValue}>{this.state.list[0].send}LP</Text>
            </View>
            <View style={styles.Send}>
-             <Text style={styles.SendTitle}>Request</Text>
+             <Text style={styles.SendTitle}>{I18njs.t('Wallets.Request')}</Text>
              <Text style={styles.SendValue}>{this.state.list[0].request}LP</Text>
            </View>
          </View>

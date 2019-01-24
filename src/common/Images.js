@@ -20,7 +20,12 @@ const Images = {
       EXCHANGE:                     require('../img/EXCHANGE.png'),
       weiwei:                       require('../img/weiwei.png'),
       transaction:                  require('../img/transaction.png'),
-      pay_icon:                     require('../img/pay_icon.png')  
+      pay_icon:                     require('../img/pay_icon.png'),  
+      Purse:                        require('../img/钱袋.png'),
+      number:                       require('../img/数字.png'),
+      copy:                         require('../img/复制.png'),
+      share:                        require('../img/分享.png'),
+
         // icon_selectphoto:            require('../img/icon_selectphoto.png'),
         // icon_consultdelete:          require('../img/icon_attentButton.png'),
         // icon_guide_1:                require('../img/icon_guide_1.png'),
