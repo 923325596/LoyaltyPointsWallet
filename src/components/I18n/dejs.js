@@ -41,6 +41,32 @@ export  default {
         signLeftBotton: 'e - mail - login',
         signRightButton: 'passwort vergessen'
     },
+    emailLogin: {
+        title: 'e - mail - login',
+        address: 'ihre e - mail - adresse',
+        password: 'Passwort',
+        button: 'unterschreiben',
+        signLeftBotton: 'passwort anmelden',
+        signRightButton: 'passwort vergessen'
+    },
+    loginRegEmail: {
+        title: 'anmelden, per e - mail',
+        address: 'ihre e - mail - adresse',
+        code: 'bestätigungscode',
+        password: 'Passwort',
+        samllButton: 'bekommen',
+        button: 'unterschreiben',
+        signLeftBotton: 'anmelden unter telefon',
+    },
+    loginRegPhone: {
+        title: 'anmelden unter telefon',
+        phone: 'ihre telefonnummer',
+        code: 'bestätigungscode',
+        password: 'Passwort',
+        samllButton: 'bekommen',
+        button: 'unterschreiben',
+        signLeftBotton: 'anmelden, per e - mail',
+    },
     exchangerest:{
         but:'austausch',
         today:'today insgesamt',

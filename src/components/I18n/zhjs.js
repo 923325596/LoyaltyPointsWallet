@@ -34,12 +34,37 @@ export  default {
     login: {
         title: '密码登录',
         address: '您的电子邮件地址',
-        code: '',
         password: '您的密码',
-        samllButton: '',
         button: '注册',
         signLeftBotton: '邮箱登录',
         signRightButton: '忘记密码'
+    },
+    emailLogin: {
+        title: '电子邮件登录',
+        address: '您的电子邮件地址',
+        password: '您的密码',
+        button: '登录',
+        signLeftBotton: '密码登录',
+        signRightButton: '忘记密码'
+    },
+    loginRegEmail: {
+        title: '通过电子邮件注册',
+        address: '您的电子邮件地址',
+        code: '验证码',
+        password: '您的密码',
+        samllButton: '得到',
+        button: '登录',
+        signLeftBotton: '通过电话注册',
+        signRightButton: '忘记密码'
+    },
+    loginRegPhone: {
+        title: '通过电话注册',
+        phone: '你的电话号码',
+        code: '验证码',
+        password: '您的密码',
+        samllButton: '得到',
+        button: '登录',
+        signLeftBotton: '通过电子邮件注册',
     },
     exchangerest:{
         but:'交换',

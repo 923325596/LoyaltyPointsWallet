@@ -9,6 +9,7 @@ import { Content, Container } from 'native-base'
 import {Icon, Button, FormLogin, colors} from '../../components/Bucks/index';
 import FormLabel from "../../components/Bucks/form/FormLabel";
 import FormInput from "../../components/Bucks/form/FormInput";
+import I18njs from '../../components/I18n/I18forJs';
 // import Icon from '../../components/Bucks/icons/Icon'
 //
 // import Button from '../../components/Bucks/buttons/Button'
@@ -121,7 +122,7 @@ export default class Login extends Component<Props> {
     _loginTitleHandle=()=>{
         return (
             <View style={styles.loginContentView}>
-                <Text style={styles.loginTitleHandle}>Email Login</Text>
+                <Text style={styles.loginTitleHandle}>{I18njs.t('emailLogin.title')}</Text>
                 <Text style={styles.titleHeader}></Text>
             </View>
         )
@@ -132,7 +133,7 @@ export default class Login extends Component<Props> {
     _emailAddressHandle=()=>{
         return (
             <View style={[styles.emailBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder='Your email address' />
+                <FormInput style={styles.emailInput} placeholder={I18njs.t('emailLogin.address')} />
             </View>
         )
     }
@@ -142,7 +143,7 @@ export default class Login extends Component<Props> {
     _emailPassword=()=>{
         return (
             <View style={[styles.emailPasswordBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder='Password' />
+                <FormInput style={styles.emailInput} placeholder={I18njs.t('emailLogin.password')} />
             </View>
         )
     }
@@ -154,7 +155,7 @@ export default class Login extends Component<Props> {
             <View style={styles.contentCommon}>
                 <Button
                     buttonStyle={styles.emailButtonBox}
-                    title='SIGN UP'
+                    title={I18njs.t('emailLogin.button')}
                 />
             </View>
         )
@@ -165,8 +166,8 @@ export default class Login extends Component<Props> {
     _emailPhoneSign=()=>{
         return (
             <View style={styles.contentCenterTop}>
-                <Text style={styles.emailTextSign}>Password login</Text>
-                <Text style={styles.emailTextForgot}>Forgot Password</Text>
+                <Text style={styles.emailTextSign}>{I18njs.t('emailLogin.signLeftBotton')}</Text>
+                <Text style={styles.emailTextForgot}>{I18njs.t('emailLogin.signRightButton')}</Text>
             </View>
         )
     }

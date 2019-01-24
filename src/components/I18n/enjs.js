@@ -44,6 +44,32 @@ export  default {
         signLeftBotton: 'Email login',
         signRightButton: 'Forgot Password'
     },
+    emailLogin: {
+        title: 'Email Login',
+        address: 'Your email address',
+        password: 'Password',
+        button: 'SIGN UP',
+        signLeftBotton: 'Password login',
+        signRightButton: 'Forgot Password'
+    },
+    loginRegEmail: {
+        title: 'Sign up by email',
+        address: 'Your email address',
+        code: 'Verification Code',
+        password: 'Password',
+        samllButton: 'GET',
+        button: 'SIGN UP',
+        signLeftBotton: 'Sign up by phone',
+    },
+    loginRegPhone: {
+        title: 'Sign up by phone',
+        phone: 'Your phone number',
+        code: 'Verification Code',
+        password: 'Password',
+        samllButton: 'GET',
+        button: 'SIGN UP',
+        signLeftBotton: 'Sign up by email',
+    },
     exchangerest:{
         but:'EXCHANGE',
         today:'Today Total',

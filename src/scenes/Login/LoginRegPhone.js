@@ -10,6 +10,7 @@ import {Icon, Button, FormLogin, colors} from '../../components/Bucks/index';
 import FormLabel from "../../components/Bucks/form/FormLabel";
 import FormInput from "../../components/Bucks/form/FormInput";
 
+import I18njs from "../../components/I18n/I18forJs";
 import ModalDropdown from 'react-native-modal-dropdown';
 
 // import Icon from '../../components/Bucks/icons/Icon'
@@ -28,8 +29,8 @@ export default class Login extends Component<Props> {
             timerCount:60,
             timerTitle:'获取验证码',
             type: [
-                'opt1',
-                'opt2'
+                '111',
+                '222'
             ]
         };
     };
@@ -71,7 +72,7 @@ export default class Login extends Component<Props> {
     _loginTitleHandle=()=>{
         return (
             <View style={styles.loginContentView}>
-                <Text style={styles.loginTitleHandle}>Sign up by phone</Text>
+                <Text style={styles.loginTitleHandle}>{I18njs.t('loginRegPhone.title')}</Text>
                 <Text style={styles.titleHeader}></Text>
             </View>
         )
@@ -88,17 +89,17 @@ export default class Login extends Component<Props> {
                 >
                     <Text> ∨ </Text>
                 </ModalDropdown>
-                <FormInput style={styles.phoneFormInput} placeholder='Your phone number ' />
+                <FormInput style={styles.phoneFormInput} placeholder={I18njs.t('loginRegPhone.phone')} />
             </View>
         )
     }
     _verificationCode=()=>{
         return (
             <View style={[styles.phoneCodeBox, styles.contentCommon]}>
-                <FormInput style={styles.phoneInput} placeholder='Verification Code' />
+                <FormInput style={styles.phoneInput} placeholder={I18njs.t('loginRegPhone.code')} />
                 <Button
                     buttonStyle={styles.phoneInputButton}
-                    title='GET'
+                    title={I18njs.t('loginRegPhone.samllButton')}
                     color="#65D9E2"
                 />
             </View>
@@ -107,7 +108,7 @@ export default class Login extends Component<Props> {
     _phonePassword=()=>{
         return (
             <View style={[styles.phonePasswordBox, styles.contentCommon]}>
-                <FormInput style={styles.phoneInput} placeholder='Password' />
+                <FormInput style={styles.phoneInput} placeholder={I18njs.t('loginRegPhone.password')} />
             </View>
         )
     }
@@ -116,7 +117,7 @@ export default class Login extends Component<Props> {
             <View style={styles.contentCommon}>
                 <Button
                     buttonStyle={styles.phoneButtonBox}
-                    title='SIGN UP'
+                    title={I18njs.t('loginRegPhone.button')}
                 />
             </View>
         )
@@ -124,7 +125,7 @@ export default class Login extends Component<Props> {
     _phonePhoneSign=()=>{
         return (
             <View>
-                <Text style={styles.phoneTextSign}>Sign up by email</Text>
+                <Text style={styles.phoneTextSign}>{I18njs.t('loginRegPhone.signLeftBotton')}</Text>
             </View>
         )
     }
