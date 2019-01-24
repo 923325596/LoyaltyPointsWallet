@@ -1,10 +1,10 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+* Sample React Native App
+* https://github.com/facebook/react-native
+*
+* @format
+* @flow
+*/
 
 import React, {Component} from 'react';
 import {StyleSheet,Text,View} from 'react-native';
@@ -13,15 +13,12 @@ import {StyleSheet,Text,View} from 'react-native';
 type Props = {};
 export default class Exchange2 extends Component<Props> {
 
-   
-    
-    render() {
-        return (            
-            <View style={styles.container}>
-                <Text style={{fontSize:FONT_SIZE(20),color:Color.Tabtext}}>Exchange11</Text>
-                <Text onPress={Actions.exchangerest} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录</Text>
-            </View>           
-           
+render() {
+    return ( 
+        <View style={styles.container}>
+            <Text style={{fontSize:FONT_SIZE(20),color:Color.Tabtext}}>Exchange11</Text>
+            <Text onPress={Actions.exchangerest} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录</Text>
+        </View> 
     )
     }
 }
@@ -37,9 +34,8 @@ const styles = StyleSheet.create({
 });
 var myStyles = StyleSheet.create({
     myCol:{
-      flex:1,
-      justifyContent:'center',
-      alignItems:'stretch',     
-      
+        flex:1,
+        justifyContent:'center',
+        alignItems:'stretch', 
     }
-  })
+})

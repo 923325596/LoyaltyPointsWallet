@@ -61,7 +61,9 @@ export default class ExchangeRest extends Component<Props> {
                         <Text style={{fontSize:16,color:'#2f3236',lineHeight:22}}>weiwei</Text>  
                         <Text>weiwei@gmail.com</Text>                 
                     </View> 
-                    <TouchableOpacity style={{borderRadius:3,borderColor:'#6ad9e1',borderWidth:1, width:78,height:30,paddingLeft:10}}>
+                    <TouchableOpacity
+                    onPress={Actions.exchangepages}
+                     style={{borderRadius:3,borderColor:'#6ad9e1',borderWidth:1, width:78,height:30,paddingLeft:10}}>
                         <Text style={{fontSize:12,lineHeight:22}}>EXCHANGE</Text>                    
                     </TouchableOpacity>
                     
