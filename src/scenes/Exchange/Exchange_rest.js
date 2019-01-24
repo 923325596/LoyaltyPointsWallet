@@ -84,7 +84,7 @@ export default class ExchangeRest extends Component<Props> {
                         </TouchableOpacity>
                         
                     </View>
-                    <View style={myStyles.myCol}>
+                    <View style={Styles.Col}>
                         <Text style={{fontSize:16,color:'#2f3236',lineHeight:22}}>weiwei</Text>  
                         <Text>weiwei@gmail.com</Text>                 
                     </View> 

@@ -80,5 +80,11 @@ export  default {
         yesterdate:'January 23,2019',
         LP:'LP',
         cla:'Euro Exchange'
+    },
+    exchangeTwo:{
+        firstMessage:'Loyalty Points',
+        money:'2.51',
+        secondMessage:'mode of payment',
+        pay:'zahlen'
     }
 }

@@ -77,6 +77,12 @@ export  default {
         todate:'january23,2019',
         LP:'LP',
         cla:'euro - kurs'
+    },
+    exchangeTwo:{
+        firstMessage:'treue punkte',
+        money:'2.51',
+        secondMessage:'zahlungsweise',
+        pay:'支付'
     }
 
 }

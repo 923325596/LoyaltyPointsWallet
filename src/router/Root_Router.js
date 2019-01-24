@@ -46,7 +46,6 @@ import LoginEmail from '../scenes/Login/LoginEmail'
 import LoginRegEmail from '../scenes/Login/LoginRegEmail'
 import LoginRegPhone from '../scenes/Login/LoginRegPhone'
 
-
 //忘记密码
 import ForgetPSW from '../scenes/Login/ForgetPSW';
 //登录成功

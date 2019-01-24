@@ -76,5 +76,18 @@ export  default {
         todate:'2019年1月23日',
         LP:'LP',
         cla:'欧元交易所'
+    },
+    exchangeTwo:{
+        firstMessage:'信誉积分',
+        money:'2.51',
+        secondMessage:'支付方式',
+        pay:'支付'
+    },
+    writeCode:{
+        title:'输入验证码',
+        littleTitle:'验证码已发送',
+        code:'验证码',
+        button:'好的',
+        bottomMsg:'没有验证码？倒计时后可检索'
     }
 }
