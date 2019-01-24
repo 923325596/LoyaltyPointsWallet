@@ -35,7 +35,7 @@ export  default {
         title: '密码登录',
         address: '您的电子邮件地址',
         password: '您的密码',
-        button: '注册',
+        button: '登录',
         signLeftBotton: '邮箱登录',
         signRightButton: '忘记密码'
     },
