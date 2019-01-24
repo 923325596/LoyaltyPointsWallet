@@ -40,5 +40,16 @@ export  default {
         button: '注册',
         signLeftBotton: '邮箱登录',
         signRightButton: '忘记密码'
+    },
+    exchangerest:{
+        but:'交换',
+        today:'今日总计',
+        week:'本周总计',
+        month:'本月总计',
+        names:'罗克西·谢尔顿',
+        newdate:'2019年1月24日',
+        todate:'2019年1月23日',
+        LP:'LP',
+        cla:'欧元交易所'
     }
 }

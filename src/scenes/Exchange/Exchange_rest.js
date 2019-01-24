@@ -33,8 +33,8 @@ export default class ExchangeRest extends Component<Props> {
                 source={Images.Img.transaction}></Image>
             </View>
             <View style={styles.Col}>
-                <Text style={styles.contentext}>{content}<Text>LP</Text></Text>
-                <Text>{cla}</Text>
+                <Text style={styles.contentext}>{content}<Text>{I18njs.t('exchangerest.LP')}</Text></Text>
+                <Text>{I18njs.t('exchangerest.cla')}</Text>
             </View>
             <View style={styles.Col}>
                 <Text style={{textAlign:"right"}}>{times}</Text>
@@ -69,7 +69,7 @@ export default class ExchangeRest extends Component<Props> {
                     </View>
                     <View style={styles.Col}>
                         <View style={{height:22}}>
-                            <Text style={styles.nametext}>Roxie Shelton</Text>
+                            <Text style={styles.nametext}>{I18njs.t('exchangerest.names')}</Text>
                         </View>
                         <View style={styles.mail}>
                             <Text style={styles.mailtext}>roxieshelton@gmail.com</Text>
@@ -80,7 +80,7 @@ export default class ExchangeRest extends Component<Props> {
                         style={styles.butborder}
                         onPress={()=>{Actions.exchange}}
                         >
-                            <Text style={styles.buttext}>EXCHANGE</Text>
+                            <Text style={styles.buttext}>{I18njs.t('exchangerest.but')}</Text>
                         </TouchableOpacity>
                         
                     </View>
@@ -93,7 +93,7 @@ export default class ExchangeRest extends Component<Props> {
                             <Text style={styles.onetext}>2.71</Text>
                             <View style={styles.blueline}></View>
                             <View style={{height:19,width:69}}>
-                                <Text style={styles.towtext}>Today Total</Text>
+                                <Text style={styles.towtext}>{I18njs.t('exchangerest.today')}</Text>
                             </View>
                         </View>
                     </View>
@@ -104,7 +104,7 @@ export default class ExchangeRest extends Component<Props> {
                             <Text style={styles.onetext}>3.40</Text>
                             <View style={styles.yellowline}></View>
                             <View style={{height:19,width:91}}>
-                                <Text style={styles.towtext}>This Week Total</Text>
+                                <Text style={styles.towtext}>{I18njs.t('exchangerest.week')}</Text>
                             </View>
                         </View>
                     </View>
@@ -115,7 +115,7 @@ export default class ExchangeRest extends Component<Props> {
                             <Text style={styles.onetext}>6.56</Text>
                             <View style={styles.redline}></View>
                             <View style={{height:19,width:97}}>
-                                <Text style={styles.towtext}>This Month Total</Text>
+                                <Text style={styles.towtext}>{I18njs.t('exchangerest.month')}</Text>
                             </View>
                         </View>
                     </View>

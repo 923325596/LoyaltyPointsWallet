@@ -43,5 +43,16 @@ export  default {
         button: 'SIGN UP',
         signLeftBotton: 'Email login',
         signRightButton: 'Forgot Password'
+    },
+    exchangerest:{
+        but:'EXCHANGE',
+        today:'Today Total',
+        week:'This Week Total',
+        month:'This Month Total',
+        names:'Roxie Shelton',
+        todate:'January 24,2019',
+        yesterdate:'January 23,2019',
+        LP:'LP',
+        cla:'Euro Exchange'
     }
 }

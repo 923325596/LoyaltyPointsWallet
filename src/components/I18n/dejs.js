@@ -40,5 +40,17 @@ export  default {
         button: 'unterschreiben',
         signLeftBotton: 'e - mail - login',
         signRightButton: 'passwort vergessen'
+    },
+    exchangerest:{
+        but:'austausch',
+        today:'today insgesamt',
+        week:'diese woche insgesamt',
+        month:'in diesem monat insgesamt',
+        names:'roxie shelton',
+        newdate:'january24,2019',
+        todate:'january23,2019',
+        LP:'LP',
+        cla:'euro - kurs'
     }
+
 }
