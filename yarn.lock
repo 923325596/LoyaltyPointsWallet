@@ -4957,6 +4957,11 @@ react-native-modal-dropdown@^0.6.2:
     paths-js "^0.4.5"
     react-native-svg "~5.5.1"
 
+react-native-puti-pay@^1.3.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/react-native-puti-pay/download/react-native-puti-pay-1.3.0.tgz#399adae1ecbd252e272ebad71f9e747d7cacba4b"
+  integrity sha1-OZra4ey9JS4nLrrXH550fXysuks=
+
 react-native-router-flux@4.0.6:
   version "4.0.6"
   resolved "http://registry.npm.taobao.org/react-native-router-flux/download/react-native-router-flux-4.0.6.tgz#e4723f5ce89cb5822e0c9bb6d0a8d4de6179eb58"
