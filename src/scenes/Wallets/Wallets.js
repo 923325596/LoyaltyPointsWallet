@@ -92,7 +92,7 @@ export default class Wallets extends Component<Props> {
                    return (
                        <View>
                            {this.state.active === index ?
-                               <View style={styles.footerCard1} onPress={this.debouncePress(index)}>
+                               <View style={styles.footerCard1} onPress={()=>this.debouncePress(index)}>
                                    <Text style={styles.titleCard}>{info.name}</Text>
                                    <Text style={styles.totalAmount}>{info.points}</Text>
                                    <View style={styles.footerSubtitle}>
