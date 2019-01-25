@@ -11,17 +11,14 @@ export  default {
     // send 中文
     deSend: {
         forminput: "收款人名称",
-<<<<<<< HEAD
         forminput2: "完整的数字",
         forminput3: "请填写票据",
         formLabel: '姓名',
         formLabel2: '数字',
         formLabel3: '票据',
         ButtonOk: 'Ok',
-=======
         forminput2: "Integral number",
         forminput3: "Please fill in the notes",
->>>>>>> aede5e554608d6bbb2354cf79dd7376f86103ff3
     },
     Wallets: {
         TotalBalance: "总余额",
