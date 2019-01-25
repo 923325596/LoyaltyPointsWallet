@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
         padding:px2dp(0),
         borderColor: '#CED4DA',
         paddingBottom: px2dp(12),
-        borderBottomWidth: px2dp(2),
+        borderBottomWidth: px2dp(1),
         fontFamily: 'PingFangSC-Regular',
     },
     emailCodeBox: {
@@ -233,8 +233,9 @@ const styles = StyleSheet.create({
         width: 325,
         height: 40,
         elevation: 6,
-        shadowOffset: {width: 1, height: 1},
+        shadowOffset: {width: 0, height: 8},
         shadowColor: '#6AD9E1',
+        shadowRadius: 9,
         shadowOpacity: 0.24,
     },
     emailInputButton: {

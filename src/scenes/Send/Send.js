@@ -42,6 +42,7 @@ export default class Send extends Component<Props> {
         <FormInput
           // onSuccess={true}
           placeholder={I18njs.t('deSend.forminput')}
+          underlineColorAndroid='transparent'
           containerStyle={styles.FormInputs} />
       </View>
     )
@@ -57,6 +58,7 @@ export default class Send extends Component<Props> {
         <FormInput
           // onSuccess={true}
           placeholder={I18njs.t('deSend.forminput2')}
+          underlineColorAndroid='transparent'
           containerStyle={styles.FormInputs} />
       </View>
     )
@@ -70,6 +72,7 @@ export default class Send extends Component<Props> {
         </FormLabel>
         <FormInput
           // onSuccess={true}
+          underlineColorAndroid='transparent'
           placeholder={I18njs.t('deSend.forminput3')}
           containerStyle={styles.FormInputs} />
       </View>
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     height: '100%',
-    marginTop: px2dp(20),
+    marginTop: px2dp(50),
     alignItems: 'center',
     //justifyContent: 'space-between',
   },
@@ -140,6 +143,7 @@ const styles = StyleSheet.create({
   },
   FormInputs: {
     flex: 1,
+    borderBottomWidth: 0,
     padding:0,
     justifyContent: 'center',
     fontSize:18,
@@ -161,6 +165,10 @@ const styles = StyleSheet.create({
     width:311,
     backgroundColor:'#6AE1C4',
     borderRadius:5,
+      shadowColor: '#6AE1C4',
+      shadowOffset: { width: 0, height: 8 },
+      shadowOpacity: 0.6,
+      shadowRadius: 15,
   }
 });
 
