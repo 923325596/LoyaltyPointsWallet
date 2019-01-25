@@ -16,7 +16,7 @@ import I18njs from '../../components/I18n/I18forJs';
 // import FormLogin from '../../components/Bucks/form/FormLogin'
 type Props = {};
 
-export default class WriteCode extends Component<Props> {
+export default class VerificationCode extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
@@ -73,7 +73,6 @@ export default class WriteCode extends Component<Props> {
         return (
             <View style={[styles.emailBox, styles.contentCommon]}>
                 <FormInput style={styles.emailInput} placeholder={I18njs.t('WriteCode.code')} />
-                <Image style={styles.icon1} source={Images.Img.close}/>
                 <Text  style={styles.btnColor} >2s</Text>
             </View>
         )
@@ -88,7 +87,6 @@ export default class WriteCode extends Component<Props> {
                 <Button
                     buttonStyle={styles.emailButtonBox}
                     title={I18njs.t('WriteCode.btn')}
-                    onPress={Actions.verificationcode}
                 />
                 <Text style={[styles.littleTitle,styles.textCenter]}>{I18njs.t('WriteCode.btnMsg')}</Text>
             </View>
@@ -205,7 +203,7 @@ const styles = StyleSheet.create({
     },
     emailButtonBox:{
         marginTop:px2dp(41),
-        backgroundColor: '#6AE1C4',
+        backgroundColor: '#cccccc',
         color: '#ffffff',
         borderRadius: 4,
         width: 325,

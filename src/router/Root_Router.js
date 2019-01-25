@@ -45,7 +45,10 @@ import Login from '../scenes/Login/Login'
 import LoginEmail from '../scenes/Login/LoginEmail'
 import LoginRegEmail from '../scenes/Login/LoginRegEmail'
 import LoginRegPhone from '../scenes/Login/LoginRegPhone'
+//验证码
 import WriteCode from '../scenes/Code/WriteCode'
+import PhoneGetCode from '../scenes/Code/PhoneGetCode'
+import VerificationCode from '../scenes/Code/VerificationCode'
 //忘记密码
 import ForgetPSW from '../scenes/Login/ForgetPSW';
 //登录成功
@@ -221,6 +224,33 @@ export default class Root_Router extends Component<Props> {
                             // backButtonImage={require('../img/icon_class_n.png')}
                             leftButtonIconStyle={[styles.leftIconStyle]}
                         /> 
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="请输入验证码"
+                            key="verificationcode"
+                            component={VerificationCode}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="请输入手机号"
+                            key="phonegetcode"
+                            component={PhoneGetCode}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
                         <Scene
                             navigationBarStyle={[styles.navigationBarStyle]}
                             titleStyle={[styles.titleStyle]}
