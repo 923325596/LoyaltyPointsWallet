@@ -95,5 +95,19 @@ export  default {
         code:'验证码',
         button:'好的',
         bottomMsg:'没有验证码？倒计时后可检索'
+    },
+    WriteCode:{
+        title:'输入验证码',
+        littleTitle:'验证码已发送',
+        btnMsg:'没有验证码？倒计时后可检索',
+        code:'验证码',
+        btn:'提交'
+    },
+    PhoneGetCode:{
+        title:'登录',
+        phoneNumber:'你的电话号码',
+        btn:'获取验证码',
+        email:'邮箱登录',
+        password:'密码登录'
     }
 }

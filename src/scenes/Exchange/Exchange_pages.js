@@ -137,7 +137,8 @@ const styles = StyleSheet.create({
     height: px2dp(40),
     width:px2dp(317),
     backgroundColor:'#6AE1C4',
-    fontSize:18,
+    fontWeight: '700',
+    fontSize:20,
     borderRadius:5,
   }
 });

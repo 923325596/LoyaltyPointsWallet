@@ -82,7 +82,21 @@ export  default {
         firstMessage:'treue punkte',
         money:'2.51',
         secondMessage:'zahlungsweise',
-        pay:'支付'
+        pay:'Zahlungen'
+    },
+    WriteCode:{
+        title:'ein bestätigungs - code',
+        littleTitle:'bestätigungscode verschickt wurde,',
+        btnMsg:'keine bestätigungs - code?gesucht werden nach countdown',
+        code:'bestätigungscode',
+        btn:'OK'
+    },
+    PhoneGetCode:{
+        title:'Login',
+        phoneNumber:'ihre telefonnummer',
+        btn:'- code',
+        email:'e - mail - login',
+        password:'passwort anmelden'
     }
 
 }

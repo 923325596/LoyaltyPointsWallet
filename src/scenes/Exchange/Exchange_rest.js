@@ -50,9 +50,9 @@ export default class ExchangeRest extends Component<Props> {
     render() {
         var section = [
             { key: "January 23,2019", 
-                data: [{content:"1.34",cla:"Euro Exchange",times:'7:24am'}, { content:"1.34",cla:"Euro Exchange",times:'7:24am' }, {content:"1.34",cla:"Euro Exchange",times:'7:24am' }] },
+                data: [{content:"1.34",cla:"Euro Exchange",times:'7:24am'}] },
             { key: "January 22,2019", 
-                data: [{content:"1.34",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34",cla:"Euro Exchange",times:'7:24am'}, {content:"1.34",cla:"Euro Exchange",times:'7:24am' }, {content:"1.34",cla:"Euro Exchange",times:'7:24am'}] },          
+                data: [{content:"1.34",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34",cla:"Euro Exchange",times:'7:24am' },{content:"1.34",cla:"Euro Exchange",times:'7:24am'}] },          
           ];
 
         return (            
@@ -68,7 +68,7 @@ export default class ExchangeRest extends Component<Props> {
                         source={Images.Img.weiwei}></Image>
                     </View>
                     <View style={styles.Col}>
-                        <View style={{height:22}}>
+                        <View style={{width:135,height:22}}>
                             <Text style={styles.nametext}>{I18njs.t('exchangerest.names')}</Text>
                         </View>
                         <View style={styles.mail}>
@@ -78,23 +78,11 @@ export default class ExchangeRest extends Component<Props> {
                     <View style={{textAlign:"rigth",marginTop:37}}>
                         <TouchableOpacity 
                         style={styles.butborder}
-                        onPress={()=>{Actions.exchange}}
+                        onPress={Actions.exchangepages}
                         >
                             <Text style={styles.buttext}>{I18njs.t('exchangerest.but')}</Text>
                         </TouchableOpacity>
-                        
                     </View>
-                    <View style={styles.Col}>
-                        <Text style={{fontSize:16,color:'#2f3236',lineHeight:22}}>weiwei</Text>  
-                        <Text>weiwei@gmail.com</Text>                 
-                    </View> 
-                    <TouchableOpacity
-                    onPress={Actions.exchangepages}
-                     style={{borderRadius:3,borderColor:'#6ad9e1',borderWidth:1, width:78,height:30,paddingLeft:10}}>
-                        <Text style={{fontSize:12,lineHeight:22}}>EXCHANGE</Text>                    
-                    </TouchableOpacity>
-                    
-
                 </View>
                 {/*第二行*/}
                 <View style={styles.row}>
@@ -134,7 +122,7 @@ export default class ExchangeRest extends Component<Props> {
             </View>
             
             {/*第二行*/}            
-            {/* <View>
+             <View>
                 <SectionList
                 renderSectionHeader={this._sectionComp}
                 renderItem={this._renderItem}
@@ -142,7 +130,7 @@ export default class ExchangeRest extends Component<Props> {
                 style={styles.sectilist}
                 ItemSeparatorComponent={() => <View><Text></Text></View>}
                 />
-            </View>   */}
+            </View>   
             </ScrollView>           
         </View>
     )
@@ -159,7 +147,7 @@ const styles = StyleSheet.create({
     imgview:{marginRight:20,justifyContent: 'center',alignItems: 'center'},
     chunkimg:{width:54,height:54,borderRadius:27},
     nametext:{fontSize:16,color:'#2f3263',lineHeight:22},
-    mail:{width:135,height:17},
+    mail:{width:140,height:17},
     mailtext:{fontSize:12,color:'#8e959d',lineHeight:17},
     butborder:{width:78,height:30,borderWidth:1,borderColor:"#6ad9e1",borderRadius:3},
     buttext:{fontSize:12,lineHeight:30,color:"#6ad9e1",textAlign:"center"},
