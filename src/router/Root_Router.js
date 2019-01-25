@@ -45,7 +45,7 @@ import Login from '../scenes/Login/Login'
 import LoginEmail from '../scenes/Login/LoginEmail'
 import LoginRegEmail from '../scenes/Login/LoginRegEmail'
 import LoginRegPhone from '../scenes/Login/LoginRegPhone'
-
+import WriteCode from '../scenes/Code/WriteCode'
 //忘记密码
 import ForgetPSW from '../scenes/Login/ForgetPSW';
 //登录成功
@@ -208,6 +208,19 @@ export default class Root_Router extends Component<Props> {
                             // backButtonImage={require('../img/icon_class_n.png')}
                             leftButtonIconStyle={[styles.leftIconStyle]}
                         />
+                         <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="writecode"
+                            component={WriteCode}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        /> 
                         <Scene
                             navigationBarStyle={[styles.navigationBarStyle]}
                             titleStyle={[styles.titleStyle]}
