@@ -26,6 +26,7 @@ const Images = {
       copy:                         require('../img/复制.png'),
       share:                        require('../img/分享.png'),
       close:                        require('../img/close.png'),
+      down_arrow:                   require('../img/down_arrow.png'),
 
         // icon_selectphoto:            require('../img/icon_selectphoto.png'),
         // icon_consultdelete:          require('../img/icon_attentButton.png'),

@@ -85,7 +85,7 @@ export default class PhoneGetCode extends Component<Props> {
                     dropdownStyle={[styles.dropdownShow,{height:32 * this.state.type.length}]}    //下拉框样式
                     dropdownTextStyle={styles.dropdownText}    //下拉框文本样式
                 >
-                    <Text> ∨ </Text>
+                    <Image style={styles.imageStyle} source={Images.Img.down_arrow}/>
                 </ModalDropdown>
                 <FormInput style={styles.phoneFormInput} placeholder={I18njs.t('PhoneGetCode.phoneNumber')} />
             </View>
@@ -118,6 +118,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems:'center',
         backgroundColor: 'white',
+    },
+    imageStyle:{
+        width:px2dp(9),
+        height:px2dp(6),
+        marginTop:px2dp(7)
     },
     contentCommon:{
     },
