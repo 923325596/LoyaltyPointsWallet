@@ -7,7 +7,8 @@
  */
 
 import React, {Component} from 'react';
-import {Image,SectionList,Button,StyleSheet,Text,TouchableOpacity, View,ScrollView,FlatList} from 'react-native';
+import {Image,SectionList,StyleSheet,Text,TouchableOpacity, View,ScrollView} from 'react-native';
+import I18njs from "../../components/I18n/I18forJs";
 
 type Props = {};
 export default class ExchangeRest extends Component<Props> {
@@ -25,91 +26,123 @@ export default class ExchangeRest extends Component<Props> {
         var cla=''+info.item.cla;
         var times=''+info.item.times;
         return <TouchableOpacity 
-        style={{flexDirection:'row',height:100,padding:10,backgroundColor:"#ffffff"}}>
-            <View style={{marginRight:20}}>
+        style={styles.list}>
+            <View style={styles.imgview}>
                 <Image 
-                style={{width:60,height:60,borderRadius:30}}
+                style={styles.imglist}
                 source={Images.Img.transaction}></Image>
             </View>
             <View style={styles.Col}>
-                <Text style={{fontSize:18,color:'#33383d',lineHeight:19}}>{content}</Text>
-                <Text>{cla}</Text>
+                <Text style={styles.contentext}>{content}<Text>{I18njs.t('exchangerest.LP')}</Text></Text>
+                <Text>{I18njs.t('exchangerest.cla')}</Text>
             </View>
             <View style={styles.Col}>
                 <Text style={{textAlign:"right"}}>{times}</Text>
             </View>
         </TouchableOpacity> 
-        
       }
-     
       _sectionComp = (info) => {
         var txt = info.section.key;
-        return <Text
-          style={{ height: 30, textAlign:"left", textAlignVertical: 'center',  color: '#8E959E', fontSize: 16 }}>{txt}</Text>
+        return <View style={{flexDirection:"row",margin:15}}>
+            <Text style={styles.towtext}>{txt}</Text>
+          </View>
       }
     render() {
         var section = [
             { key: "January 23,2019", 
-                data: [{content:"1.34LP",cla:"Euro Exchange",times:'7:24am'}, { content:"1.34LP",cla:"Euro Exchange",times:'7:24am' }, {content:"1.34LP",cla:"Euro Exchange",times:'7:24am' }] },
+                data: [{content:"1.34",cla:"Euro Exchange",times:'7:24am'}, { content:"1.34",cla:"Euro Exchange",times:'7:24am' }, {content:"1.34",cla:"Euro Exchange",times:'7:24am' }] },
             { key: "January 22,2019", 
-                data: [{content:"1.34LP",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34LP",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34LP",cla:"Euro Exchange",times:'7:24am'}, {content:"1.34LP",cla:"Euro Exchange",times:'7:24am' }, {content:"1.34LP",cla:"Euro Exchange",times:'7:24am'}] },          
+                data: [{content:"1.34",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34",cla:"Euro Exchange",times:'7:24am' }, { content:"1.34",cla:"Euro Exchange",times:'7:24am'}, {content:"1.34",cla:"Euro Exchange",times:'7:24am' }, {content:"1.34",cla:"Euro Exchange",times:'7:24am'}] },          
           ];
 
         return (            
             <View>
             <ScrollView >
             {/*第一块*/}
-            <View style={{padding:20,backgroundColor:'#ffffff',margin:0}}> 
+            <View style={styles.chunk}> 
                 {/*第一行*/}
-                <View style={{flexDirection:'row',height:100,marginBottom:10}}>         
-                    <View style={{marginRight:20}}>
+                <View style={styles.row}>
+                    <View style={styles.imgview}>
                         <Image 
-                        style={{width:80,height:80,borderRadius:40}}
-                        source={Images.Img.weiwei}></Image>                    
+                        style={styles.chunkimg}
+                        source={Images.Img.weiwei}></Image>
+                    </View>
+                    <View style={styles.Col}>
+                        <View style={{height:22}}>
+                            <Text style={styles.nametext}>{I18njs.t('exchangerest.names')}</Text>
+                        </View>
+                        <View style={styles.mail}>
+                            <Text style={styles.mailtext}>roxieshelton@gmail.com</Text>
+                        </View>
+                    </View>
+                    <View style={{textAlign:"rigth",marginTop:37}}>
+                        <TouchableOpacity 
+                        style={styles.butborder}
+                        onPress={()=>{Actions.exchange}}
+                        >
+                            <Text style={styles.buttext}>{I18njs.t('exchangerest.but')}</Text>
+                        </TouchableOpacity>
+                        
                     </View>
                     <View style={styles.Col}>
                         <Text style={{fontSize:16,color:'#2f3236',lineHeight:22}}>weiwei</Text>  
                         <Text>weiwei@gmail.com</Text>                 
                     </View> 
-                    <TouchableOpacity style={{borderRadius:3,borderColor:'#6ad9e1',borderWidth:1, width:78,height:30,paddingLeft:10,textAlign:"centre"}}>
+                    <TouchableOpacity
+                    onPress={Actions.exchangepages}
+                     style={{borderRadius:3,borderColor:'#6ad9e1',borderWidth:1, width:78,height:30,paddingLeft:10}}>
                         <Text style={{fontSize:12,lineHeight:22}}>EXCHANGE</Text>                    
                     </TouchableOpacity>
                     
+
                 </View>
                 {/*第二行*/}
-                <View style={{flexDirection:'row',height:100,padding:20,backgroundColor:'#ffffff'}}>
+                <View style={styles.row}>
                     {/* 第一列 */}
                     <View style={styles.Col}>
-                        <Text style={{fontSize:20,color:'#33383d',lineHeight:28}}>2.71</Text>
-                        <View style={{borderWidth:2, borderColor:'#78aef9',width:22}}></View>
-                        <Text style={{fontSize:12,color:'#8e959e',lineHeight:19}}>Today Total</Text>
+                        <View>
+                            <Text style={styles.onetext}>2.71</Text>
+                            <View style={styles.blueline}></View>
+                            <View style={{height:19,width:69}}>
+                                <Text style={styles.towtext}>{I18njs.t('exchangerest.today')}</Text>
+                            </View>
+                        </View>
                     </View>
-                    <View style={{borderWidth:1, borderColor:'#eeeeee',height:30,margin:20}}></View>
+                    <View style={styles.verline}></View>
                     {/* 第二列 */}
                     <View style={styles.Col}>
-                        <Text style={{fontSize:20,color:'#33383d',lineHeight:28}}>3.40</Text>
-                        <View style={{borderWidth:2, borderColor:'#ffcd47',width:22}}></View>
-                        <Text style={{fontSize:12,color:'#8e959e',lineHeight:19}}>This Week Total</Text>
+                        <View>
+                            <Text style={styles.onetext}>3.40</Text>
+                            <View style={styles.yellowline}></View>
+                            <View style={{height:19,width:91}}>
+                                <Text style={styles.towtext}>{I18njs.t('exchangerest.week')}</Text>
+                            </View>
+                        </View>
                     </View>
                     {/* 第三列 */}
-                    <View style={{borderWidth:1, borderColor:'#eeeeee',height:30,margin:20}}></View>
+                    <View style={styles.verline}></View>
                     <View style={styles.Col}>
-                        <Text style={{fontSize:20,color:'#33383d',lineHeight:28}}>6.56</Text>
-                        <View style={{borderWidth:2, borderColor:'#f9504d',width:22}}></View>
-                        <Text style={{fontSize:12,color:'#8e959e',lineHeight:19}}>This Month Total</Text>
+                        <View>
+                            <Text style={styles.onetext}>6.56</Text>
+                            <View style={styles.redline}></View>
+                            <View style={{height:19,width:97}}>
+                                <Text style={styles.towtext}>{I18njs.t('exchangerest.month')}</Text>
+                            </View>
+                        </View>
                     </View>
                 </View>
             </View>
             
             {/*第二行*/}            
-            <View style={{padding:20}}>
+            {/* <View>
                 <SectionList
                 renderSectionHeader={this._sectionComp}
                 renderItem={this._renderItem}
                 sections={section}
+                style={styles.sectilist}
                 ItemSeparatorComponent={() => <View><Text></Text></View>}
                 />
-            </View>  
+            </View>   */}
             </ScrollView>           
         </View>
     )
@@ -122,12 +155,28 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
-    Col:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'stretch',
-        width:100    
-        
-      }
+    chunk:{flex:1,padding:20,backgroundColor:'#ffffff',margin:0},
+    imgview:{marginRight:20,justifyContent: 'center',alignItems: 'center'},
+    chunkimg:{width:54,height:54,borderRadius:27},
+    nametext:{fontSize:16,color:'#2f3263',lineHeight:22},
+    mail:{width:135,height:17},
+    mailtext:{fontSize:12,color:'#8e959d',lineHeight:17},
+    butborder:{width:78,height:30,borderWidth:1,borderColor:"#6ad9e1",borderRadius:3},
+    buttext:{fontSize:12,lineHeight:30,color:"#6ad9e1",textAlign:"center"},
+    row:{flexDirection:'row',height:100},
+    Col:{flex:1,justifyContent:'center',alignItems:'stretch'},
+    blueline:{borderWidth:2, borderColor:'blue',width:22},
+    yellowline:{borderWidth:2, borderColor:'yellow',width:22},
+    redline:{borderWidth:2, borderColor:'red',width:22},
+    verline:{borderWidth:1, borderColor:'#eeeeee',height:30,marginTop:30,marginRight:15},
+    onetext:{fontSize:20,color:'#33383d',lineHeight:28},
+    towtext:{fontSize:12,color:'#8e959e',lineHeight:19},  
+    list:{flexDirection:'row',height:64,padding:10,backgroundColor:"#ffffff",borderWidth:1, borderColor:'white',borderRadius:5}, 
+    sectilist:{margin:20,}, 
+    keytext:{ height: 30, textAlign:"left", textAlignVertical: 'center',  color: '#8E959E', fontSize: 16 },
+    contentext:{fontSize:18,color:'#33383d',lineHeight:19},
+    imglist:{width:32,height:32,borderRadius:16},
+
+    
 
 });

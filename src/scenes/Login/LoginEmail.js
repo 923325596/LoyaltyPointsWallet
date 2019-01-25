@@ -122,7 +122,7 @@ export default class Login extends Component<Props> {
     _loginTitleHandle=()=>{
         return (
             <View style={styles.loginContentView}>
-                <Text style={styles.loginTitleHandle}>{I18njs.t('login.title')}</Text>
+                <Text style={styles.loginTitleHandle}>{I18njs.t('emailLogin.title')}</Text>
                 <Text style={styles.titleHeader}></Text>
             </View>
         )
@@ -133,7 +133,7 @@ export default class Login extends Component<Props> {
     _emailAddressHandle=()=>{
         return (
             <View style={[styles.emailBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder={I18njs.t('login.address')} />
+                <FormInput style={styles.emailInput} placeholder={I18njs.t('emailLogin.address')} />
             </View>
         )
     }
@@ -143,7 +143,7 @@ export default class Login extends Component<Props> {
     _emailPassword=()=>{
         return (
             <View style={[styles.emailPasswordBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder={I18njs.t('login.password')} />
+                <FormInput style={styles.emailInput} placeholder={I18njs.t('emailLogin.password')} />
             </View>
         )
     }
@@ -155,7 +155,7 @@ export default class Login extends Component<Props> {
             <View style={styles.contentCommon}>
                 <Button
                     buttonStyle={styles.emailButtonBox}
-                    title={I18njs.t('login.button')}
+                    title={I18njs.t('emailLogin.button')}
                 />
             </View>
         )
@@ -166,8 +166,8 @@ export default class Login extends Component<Props> {
     _emailPhoneSign=()=>{
         return (
             <View style={styles.contentCenterTop}>
-                <Text style={styles.emailTextSign}>{I18njs.t('login.signLeftBotton')}</Text>
-                <Text style={styles.emailTextForgot}>{I18njs.t('login.signRightButton')}</Text>
+                <Text style={styles.emailTextSign}>{I18njs.t('emailLogin.signLeftBotton')}</Text>
+                <Text style={styles.emailTextForgot}>{I18njs.t('emailLogin.signRightButton')}</Text>
             </View>
         )
     }
