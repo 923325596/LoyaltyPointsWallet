@@ -3,6 +3,7 @@ package com.loyaltypointswallet;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.puti.paylib.PayReactPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.remobile.toast.RCTToastPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new PayReactPackage(),
             new RNI18nPackage(),
             new RCTToastPackage()
       );
