@@ -50,14 +50,14 @@ export default class Login extends Component<Props> {
 
     render(){
         return (
-            <View style={styles.contentCenter}>
-                <Content>
-                    {this._loginTitleHandle()}
+            <View style={styles.contentView}>
+                {this._loginTitleHandle()}
+                <View style={styles.contentCenter}>
                     {this._emailAddressHandle()}
                     {this._emailPassword()}
                     {this._emailButton()}
                     {this._emailPhoneSign()}
-                </Content>
+                </View>
                 {/*<Container style={{backgroundColor:'#fafafa'}} >
                     <StatusBar backgroundColor={Color.bg}
                                barStyle="dark-content"
@@ -123,7 +123,6 @@ export default class Login extends Component<Props> {
         return (
             <View style={styles.loginContentView}>
                 <Text style={styles.loginTitleHandle}>{I18njs.t('emailLogin.title')}</Text>
-                <Text style={styles.titleHeader}></Text>
             </View>
         )
     }
@@ -133,7 +132,7 @@ export default class Login extends Component<Props> {
     _emailAddressHandle=()=>{
         return (
             <View style={[styles.emailBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder={I18njs.t('emailLogin.address')} />
+                <FormInput containerStyle={styles.emailInput} underlineColorAndroid='transparent' placeholder={I18njs.t('emailLogin.address')} />
             </View>
         )
     }
@@ -143,7 +142,7 @@ export default class Login extends Component<Props> {
     _emailPassword=()=>{
         return (
             <View style={[styles.emailPasswordBox, styles.contentCommon]}>
-                <FormInput style={styles.emailInput} placeholder={I18njs.t('emailLogin.password')} />
+                <FormInput containerStyle={styles.emailInput} underlineColorAndroid='transparent' placeholder={I18njs.t('emailLogin.password')} />
             </View>
         )
     }
@@ -173,48 +172,55 @@ export default class Login extends Component<Props> {
     }
 }
 const styles = StyleSheet.create({
-    contentCenter: {
-        flex:1,
+    contentView: {
         height: 650,
-        justifyContent: 'center',
-        alignItems:'center',
         backgroundColor: 'white',
     },
+    contentCenter: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems:'center',
+    },
     contentCommon:{
-        width: 350,
+        // width: 350,
         padding: 0,
         marginLeft: px2dp(4),
     },
     loginContentView: {
+        width: 65,
+        borderStyle: 'solid',
+        borderColor: '#6AE1C4',
+        flexWrap: 'nowrap',
+        borderBottomWidth:2,
         paddingTop: px2dp(22),
-        marginLeft: px2dp(16),
+        paddingBottom: px2dp(36),
+        marginLeft: px2dp(32),
     },
     loginTitleHandle: {
+        width: 150,
+        position: 'absolute',
+        top: 22,
         fontFamily: 'PingFangSC-Regular',
         fontSize: 24,
         color: '#33383D',
         letterSpacing: 0.5,
         lineHeight: 27,
     },
-    titleHeader: {
-        width: 55,
-        borderBottomWidth: px2dp(2),
-        borderColor: '#6AE1C4',
-        marginTop: px2dp(-5)
-    },
     emailBox: {
+        width: 300,
         margin: px2dp(0),
         marginTop:px2dp(73),
+        borderColor: '#CED4DA',
+        borderBottomWidth: px2dp(1),
     },
     emailInput: {
-        width: 325,
         fontSize: 16,
         lineHeight: 19,
         color: '#CED4DA',
         padding:px2dp(0),
-        borderColor: '#CED4DA',
         paddingBottom: px2dp(12),
-        borderBottomWidth: px2dp(1),
+        marginLeft: px2dp(0),
+        borderBottomWidth: 0,
         fontFamily: 'PingFangSC-Regular',
     },
     emailCodeBox: {
@@ -223,14 +229,18 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     emailPasswordBox: {
+        width: 300,
+        borderColor: '#CED4DA',
+        borderBottomWidth: px2dp(1),
         marginTop:px2dp(41),
+        marginLeft: px2dp(30),
     },
     emailButtonBox:{
         marginTop:px2dp(41),
         backgroundColor: '#6AE1C4',
         color: '#ffffff',
         borderRadius: 4,
-        width: 325,
+        width: 300,
         height: 40,
         elevation: 6,
         shadowOffset: {width: 0, height: 8},
@@ -254,29 +264,28 @@ const styles = StyleSheet.create({
 
 
     contentCenterTop: {
-        width: 325,
+        width: 300,
         marginLeft: px2dp(16),
+        marginTop:px2dp(20),
         flexDirection:'row', //主轴水平，起点在左，默认值
         flexWrap:'nowrap',   // 不换行， 默认
         justifyContent:'flex-start', // 左对齐，默认值
         flex:1, //只看中比例，不看重实际数值
     },
     emailTextSign: {
-        width: 150,
+        width: 149,
         fontSize: 12,
         lineHeight: 18,
         color: '#78AEF9',
         textAlign: 'left',
-        marginTop:px2dp(20),
         fontFamily: 'PingFangSC-Regular',
     },
     emailTextForgot: {
-        width: 155,
+        width: 149,
         fontSize: 12,
         lineHeight: 18,
         color: '#78AEF9',
         textAlign: 'right',
-        marginTop:px2dp(20),
         fontFamily: 'PingFangSC-Regular',
     },
 
