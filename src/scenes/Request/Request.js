@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
     fangkuaitou1:{
         marginLeft: px2dp(10),
         fontSize:13,
-        borderRadius: 22,
         width: 25,
         height: 25,
     },
