@@ -115,8 +115,24 @@ android {
             include "armeabi-v7a", "x86"
         }
     }
-    buildTypes {
+    signingConfigs {
         release {
+            storeFile file('wallet.jks')
+            storePassword "haomo123"
+            keyAlias "wallet"
+            keyPassword "haomo123"
+        }
+
+    }
+
+    buildTypes {
+
+        debug  {
+            signingConfig signingConfigs.release
+
+        }
+        release {
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -137,6 +153,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-puti-pay')
     implementation project(':react-native-i18n')
     implementation project(':@remobile_react-native-toast')
     implementation fileTree(dir: "libs", include: ["*.jar"])
