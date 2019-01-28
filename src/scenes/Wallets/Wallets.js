@@ -92,13 +92,8 @@ export default class Wallets extends Component<Props> {
                    return (
                        <View>
                            {this.state.active === index ?
-<<<<<<< HEAD
-                               <View style={styles.footerCard1} onPress={()=>this.debouncePress(index)}>
-                                   <Text style={styles.titleCard}  onPress={Actions.mywallet}>{info.name}</Text>
-=======
                                <TouchableOpacity style={styles.footerCard1} onPress={()=>this.debouncePress(index)}>
-                                   <Text style={styles.titleCard}>{info.name}</Text>
->>>>>>> 8c59c9ee8d07d9a20614c0721cfedd36680031fa
+                                   <Text style={styles.titleCard} onPress={Actions.mywallet}>{info.name}</Text>
                                    <Text style={styles.totalAmount}>{info.points}</Text>
                                    <View style={styles.footerSubtitle}>
                                        <Text style={styles.subtitleCard}>{info.lp}LP</Text>
