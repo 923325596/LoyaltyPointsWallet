@@ -77,6 +77,26 @@ export  default {
         todate:'january23,2019',
         LP:'LP',
         cla:'euro - kurs'
+    },
+    exchangeTwo:{
+        firstMessage:'treue punkte',
+        money:'2.51',
+        secondMessage:'zahlungsweise',
+        pay:'Zahlungen'
+    },
+    WriteCode:{
+        title:'ein bestätigungs - code',
+        littleTitle:'bestätigungscode verschickt wurde,',
+        btnMsg:'keine bestätigungs - code?gesucht werden nach countdown',
+        code:'bestätigungscode',
+        btn:'OK'
+    },
+    PhoneGetCode:{
+        title:'Login',
+        phoneNumber:'ihre telefonnummer',
+        btn:'- code',
+        email:'e - mail - login',
+        password:'passwort anmelden'
     }
 
 }

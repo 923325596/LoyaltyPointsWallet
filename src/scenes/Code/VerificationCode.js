@@ -16,7 +16,7 @@ import I18njs from '../../components/I18n/I18forJs';
 // import FormLogin from '../../components/Bucks/form/FormLogin'
 type Props = {};
 
-export default class Login extends Component<Props> {
+export default class VerificationCode extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
@@ -40,35 +40,29 @@ export default class Login extends Component<Props> {
 
     };
 
-    /**
-     * 手机号的正则表达式
-     * */
-    checkPhoneNum=(phone)=>{
-        let reg = /^1[3|5|7|8]\d{9}$/g;
-        return reg.test(phone);
-    };
 
     render(){
         return (
-            <View style={styles.contentView}>
-                {this._loginTitleHandle()}
-                <View style={styles.contentCenter}>
+            <View style={styles.contentCenter}>
+                <Content>
+                    {this._loginTitleHandle()}
                     {this._emailAddressHandle()}
-                    {this._emailPassword()}
                     {this._emailButton()}
-                    {this._emailPhoneSign()}
-                </View>
+                    {/* {this._emailPhoneSign()} */}
+                </Content>
+               
             </View>
         );
     }
 
     /**
-     * 邮箱登录标题
+     * 验证码登录标题
      */
     _loginTitleHandle=()=>{
         return (
             <View style={styles.loginContentView}>
-                <Text style={styles.loginTitleHandle}>{I18njs.t('login.title')}</Text>
+                <Text style={styles.loginTitleHandle}>{I18njs.t('WriteCode.title')}</Text>
+                <Text style={styles.littleTitle}>{I18njs.t('WriteCode.littleTitle')}</Text>
             </View>
         )
     }
@@ -78,20 +72,12 @@ export default class Login extends Component<Props> {
     _emailAddressHandle=()=>{
         return (
             <View style={[styles.emailBox, styles.contentCommon]}>
-                <FormInput containerStyle={styles.emailInput} underlineColorAndroid='transparent' placeholder={I18njs.t('login.address')} />
+                <FormInput style={styles.emailInput} placeholder={I18njs.t('WriteCode.code')} />
+                <Text  style={styles.btnColor} >2s</Text>
             </View>
         )
     }
-    /**
-     * 邮箱登录密码
-     */
-    _emailPassword=()=>{
-        return (
-            <View style={[styles.emailPasswordBox, styles.contentCommon]}>
-                <FormInput containerStyle={styles.emailInput} underlineColorAndroid='transparent' placeholder={I18njs.t('login.password')} />
-            </View>
-        )
-    }
+ 
     /**
      * 邮箱登录按钮
      */
@@ -100,73 +86,111 @@ export default class Login extends Component<Props> {
             <View style={styles.contentCommon}>
                 <Button
                     buttonStyle={styles.emailButtonBox}
-                    title={I18njs.t('login.button')}
+                    title={I18njs.t('WriteCode.btn')}
                 />
+                <Text style={[styles.littleTitle,styles.textCenter]}>{I18njs.t('WriteCode.btnMsg')}</Text>
             </View>
         )
     }
     /**
      * 登录方式
      */
-    _emailPhoneSign=()=>{
-        return (
-            <View style={styles.contentCenterTop}>
-                <Text style={styles.emailTextSign}>{I18njs.t('login.signLeftBotton')}</Text>
-                <Text style={styles.emailTextForgot}>{I18njs.t('login.signRightButton')}</Text>
-            </View>
-        )
-    }
+    // _emailPhoneSign=()=>{
+    //     return (
+    //         <View style={styles.contentCenterTop}>
+    //             <Text style={styles.emailTextSign}>{I18njs.t('emailLogin.signLeftBotton')}</Text>
+    //             <Text style={styles.emailTextForgot}>{I18njs.t('emailLogin.signRightButton')}</Text>
+    //         </View>
+    //     )
+    // }
 }
 const styles = StyleSheet.create({
-    contentView: {
-        height: 650,
-        backgroundColor: 'white',
-    },
     contentCenter: {
         flex:1,
+        height: px2dp(650),
         justifyContent: 'center',
         alignItems:'center',
+        backgroundColor: 'white',
+    },
+    rightCon:{
+        marginBottom:px2dp(8),
+        width:px2dp(110),
+        position:'absolute',
+        right:px2dp(0),
+    },
+    textCenter:{
+        textAlign:'center',
+        alignItems:'center',
+        marginTop:px2dp(13),
+    },
+    btnColor:{
+        width:px2dp(64),
+        height:px2dp(26),
+        borderStyle: 'solid',
+        borderColor: '#EEEEEE',
+        backgroundColor:'#ffffff',
+        borderWidth: 1,
+        alignItems:'center',
+        textAlign:'center',
+        borderRadius: 3,
+        position: 'absolute',
+        top: 3,
+        right: 12,
+        zIndex: 3,
+    },
+    icon1:{
+        width:px2dp(10),
+        height:px2dp(10),
+        marginRight:px2dp(20),
+
+        position: 'absolute',
+        top: 11,
+        right:80,
+        zIndex: 3,
+    },
+    littleTitle:{
+        fontSize: 12,
+        color: '#CED4DA',
+        alignItems: 'center',
+        marginTop:6,
     },
     contentCommon:{
-        // width: 350,
+        width: 350,
         padding: 0,
         marginLeft: px2dp(4),
     },
     loginContentView: {
-        width: 65,
-        borderStyle: 'solid',
-        borderColor: '#6AE1C4',
-        flexWrap: 'nowrap',
-        borderBottomWidth:2,
         paddingTop: px2dp(22),
-        paddingBottom: px2dp(36),
-        marginLeft: px2dp(32),
+        marginLeft: px2dp(16),
     },
     loginTitleHandle: {
-        width: 250,
-        position: 'absolute',
-        top: 22,
         fontFamily: 'PingFangSC-Regular',
         fontSize: 24,
         color: '#33383D',
         letterSpacing: 0.5,
         lineHeight: 27,
     },
+    titleHeader: {
+        width: 55,
+        borderBottomWidth: px2dp(2),
+        borderColor: '#6AE1C4',
+        marginTop: px2dp(-5),
+    },
     emailBox: {
-        width: 300,
         margin: px2dp(0),
-        marginTop:px2dp(73),
-        borderColor: '#CED4DA',
-        borderBottomWidth: px2dp(1),
+        marginTop:px2dp(43),
+        justifyContent:'space-between',
+        position: 'relative',
     },
     emailInput: {
+        width: 325,
         fontSize: 16,
         lineHeight: 19,
         color: '#CED4DA',
         padding:px2dp(0),
+        borderColor: '#CED4DA',
         paddingBottom: px2dp(12),
-        marginLeft: px2dp(0),
-        borderBottomWidth: 0,
+        borderBottomWidth: px2dp(2),
         fontFamily: 'PingFangSC-Regular',
     },
     emailCodeBox: {
@@ -175,23 +199,18 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     emailPasswordBox: {
-        width: 300,
-        borderColor: '#CED4DA',
-        borderBottomWidth: px2dp(1),
         marginTop:px2dp(41),
-        marginLeft: px2dp(30),
     },
     emailButtonBox:{
         marginTop:px2dp(41),
-        backgroundColor: '#6AE1C4',
+        backgroundColor: '#cccccc',
         color: '#ffffff',
         borderRadius: 4,
-        width: 300,
+        width: 325,
         height: 40,
         elevation: 6,
-        shadowOffset: {width: 0, height: 8},
+        shadowOffset: {width: 1, height: 1},
         shadowColor: '#6AD9E1',
-        shadowRadius: 9,
         shadowOpacity: 0.24,
     },
     emailInputButton: {
@@ -210,28 +229,29 @@ const styles = StyleSheet.create({
 
 
     contentCenterTop: {
-        width: 300,
+        width: 325,
         marginLeft: px2dp(16),
-        marginTop:px2dp(20),
         flexDirection:'row', //主轴水平，起点在左，默认值
         flexWrap:'nowrap',   // 不换行， 默认
         justifyContent:'flex-start', // 左对齐，默认值
         flex:1, //只看中比例，不看重实际数值
     },
     emailTextSign: {
-        width: 149,
+        width: 150,
         fontSize: 12,
         lineHeight: 18,
         color: '#78AEF9',
         textAlign: 'left',
+        marginTop:px2dp(20),
         fontFamily: 'PingFangSC-Regular',
     },
     emailTextForgot: {
-        width: 149,
+        width: 155,
         fontSize: 12,
         lineHeight: 18,
         color: '#78AEF9',
         textAlign: 'right',
+        marginTop:px2dp(20),
         fontFamily: 'PingFangSC-Regular',
     },
 

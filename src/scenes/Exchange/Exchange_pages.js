@@ -35,8 +35,8 @@ export default class ExchangePages extends Component<Props> {
   _renderViewOk=()=>{
     return (
       <View style={styles.ViewOk}>
-        <Text style={styles.titleAll}>Loyalty Points</Text>
-        <Text style={styles.messageAll}>2.51</Text>
+        <Text style={styles.titleAll}>{I18njs.t('exchangeTwo.firstMessage')}</Text>
+        <Text style={styles.messageAll}>{I18njs.t('exchangeTwo.money')}</Text>
       </View>
     )
   };
@@ -44,7 +44,7 @@ export default class ExchangePages extends Component<Props> {
   _renderViewOk2=()=>{
     return (
       <View style={styles.ViewOk}>
-        <Text style={styles.titleAll}>mode of payment</Text>
+        <Text style={styles.titleAll}>{I18njs.t('exchangeTwo.secondMessage')}</Text>
         <Image style={styles.icon1} source={Images.Img.pay_icon} />
       </View>
     )
@@ -57,7 +57,7 @@ export default class ExchangePages extends Component<Props> {
         <Button
         onPress={Actions.exchangerest}
         buttonStyle={styles.buttonStyle}
-        title='PAY'/>
+        title={I18njs.t('exchangeTwo.pay')}/>
       </View>
     )
   }
@@ -137,7 +137,8 @@ const styles = StyleSheet.create({
     height: px2dp(40),
     width:px2dp(317),
     backgroundColor:'#6AE1C4',
-    fontSize:18,
+    fontWeight: '700',
+    fontSize:20,
     borderRadius:5,
   }
 });

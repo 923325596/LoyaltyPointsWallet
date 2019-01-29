@@ -10,7 +10,7 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Image,TouchableOpacity} from 'react-native';
 import {Container,Content} from 'native-base'
 import I18njs from '../../components/I18n/I18forJs'
 
@@ -92,22 +92,22 @@ export default class Wallets extends Component<Props> {
                    return (
                        <View>
                            {this.state.active === index ?
-                               <View style={styles.footerCard1} onPress={this.debouncePress(index)}>
-                                   <Text style={styles.titleCard}>{info.name}</Text>
+                               <TouchableOpacity style={styles.footerCard1} onPress={()=>this.debouncePress(index)}>
+                                   <Text style={styles.titleCard} onPress={Actions.mywallet}>{info.name}</Text>
                                    <Text style={styles.totalAmount}>{info.points}</Text>
                                    <View style={styles.footerSubtitle}>
                                        <Text style={styles.subtitleCard}>{info.lp}LP</Text>
                                        {/*<Text style={styles.subtitleCardSmall}>LP</Text>*/}
                                    </View>
-                               </View> :
-                               <View style={styles.footerCard2} onPress={this.debouncePress(index)}>
+                               </TouchableOpacity> :
+                               <TouchableOpacity style={styles.footerCard2} onPress={()=>this.debouncePress(index)}>
                                    <Text style={styles.titleCard2}>{info.name}</Text>
                                    <Text style={styles.totalAmount2}>{info.points}</Text>
                                    <View style={styles.footerSubtitle2}>
                                        <Text style={styles.subtitleCard2}>{info.lp}LP</Text>
                                        {/*<Text style={styles.subtitleCard2Small}>LP</Text>*/}
                                    </View>
-                               </View>}
+                               </TouchableOpacity>}
                        </View>
                    );
                })}

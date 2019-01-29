@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {StyleSheet,Text,View} from 'react-native';
 
+
 type Props = {};
 export default class Exchange2 extends Component<Props> {
 
@@ -24,6 +25,9 @@ export default class Exchange2 extends Component<Props> {
                 <Text onPress={Actions.loginregemail} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录2</Text>
                 <Text onPress={Actions.loginregphone} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录3</Text>
                 <Text onPress={Actions.login} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录4</Text>
+                <Text onPress={Actions.writecode} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录5</Text>
+                <Text onPress={Actions.verificationcode} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录6</Text>
+                <Text onPress={Actions.phonegetcode} style={{fontSize:FONT_SIZE(20),color:Color.Tabtext,marginTop:px2dp(20)}}>点我登录7</Text>
             </View>
 
     )

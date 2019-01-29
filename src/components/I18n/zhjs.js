@@ -11,6 +11,12 @@ export  default {
     // send 中文
     deSend: {
         forminput: "收款人名称",
+        forminput2: "完整的数字",
+        forminput3: "请填写票据",
+        formLabel: '姓名',
+        formLabel2: '数字',
+        formLabel3: '票据',
+        ButtonOk: 'Ok',
         forminput2: "Integral number",
         forminput3: "Please fill in the notes",
     },
@@ -76,5 +82,32 @@ export  default {
         todate:'2019年1月23日',
         LP:'LP',
         cla:'欧元交易所'
+    },
+    exchangeTwo:{
+        firstMessage:'信誉积分',
+        money:'2.51',
+        secondMessage:'支付方式',
+        pay:'支付'
+    },
+    writeCode:{
+        title:'输入验证码',
+        littleTitle:'验证码已发送',
+        code:'验证码',
+        button:'好的',
+        bottomMsg:'没有验证码？倒计时后可检索'
+    },
+    WriteCode:{
+        title:'输入验证码',
+        littleTitle:'验证码已发送',
+        btnMsg:'没有验证码？倒计时后可检索',
+        code:'验证码',
+        btn:'提交'
+    },
+    PhoneGetCode:{
+        title:'登录',
+        phoneNumber:'你的电话号码',
+        btn:'获取验证码',
+        email:'邮箱登录',
+        password:'密码登录'
     }
 }

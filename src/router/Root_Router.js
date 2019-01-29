@@ -45,13 +45,17 @@ import Login from '../scenes/Login/Login'
 import LoginEmail from '../scenes/Login/LoginEmail'
 import LoginRegEmail from '../scenes/Login/LoginRegEmail'
 import LoginRegPhone from '../scenes/Login/LoginRegPhone'
-
-
+//验证码
+import WriteCode from '../scenes/Code/WriteCode'
+import PhoneGetCode from '../scenes/Code/PhoneGetCode'
+import VerificationCode from '../scenes/Code/VerificationCode'
 //忘记密码
 import ForgetPSW from '../scenes/Login/ForgetPSW';
 //登录成功
 import ExchangeRest from '../scenes/Exchange/Exchange_rest';
 import ExchangePages from '../scenes/Exchange/Exchange_pages'
+//点击卡片跳转
+import MyWallet from '../scenes/Wallets/Wallet1';
 
 let self; //将App组件中的this赋给全局的self
 global.showLoading = false; //所有子页面均可直接调用global.showLoading()来展示Loading
@@ -209,6 +213,46 @@ export default class Root_Router extends Component<Props> {
                             // backButtonImage={require('../img/icon_class_n.png')}
                             leftButtonIconStyle={[styles.leftIconStyle]}
                         />
+                         <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="登录成功"
+                            key="writecode"
+                            component={WriteCode}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        /> 
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="请输入验证码"
+                            key="verificationcode"
+                            component={VerificationCode}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+                        
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="请输入手机号"
+                            key="phonegetcode"
+                            component={PhoneGetCode}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
                         <Scene
                             navigationBarStyle={[styles.navigationBarStyle]}
                             titleStyle={[styles.titleStyle]}
@@ -249,6 +293,21 @@ export default class Root_Router extends Component<Props> {
                             // backButtonImage={require('../img/icon_class_n.png')}
                             leftButtonIconStyle={[styles.leftIconStyle]}
                         />
+
+                        <Scene
+                            navigationBarStyle={[styles.navigationBarStyle]}
+                            titleStyle={[styles.titleStyle]}
+                            title="我的钱包"
+                            key="mywallet"
+                            component={MyWallet}
+                            onRight={()=>{}}
+                            rightTitle=""
+                            duration={1}
+                            hideNavBar={false}
+                            // backButtonImage={require('../img/icon_class_n.png')}
+                            leftButtonIconStyle={[styles.leftIconStyle]}
+                        />
+
                         <Tabs
                             // type={ActionConst.REPLACE}
                             key="tabbar"
