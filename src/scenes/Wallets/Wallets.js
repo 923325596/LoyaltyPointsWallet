@@ -21,7 +21,7 @@ export default class Wallets extends Component<Props> {
     super(props);
     this.state = {
       // WalletHeader中展示的数据
-      userInfo: {'curentBalance': '22.58', 'income': '72.58', 'expenses': '5.00'},
+      userInfo: {'curentBalance': '22.58', 'income': '72.58', 'expenses': '50.00'},
       // wallet中展示的数据
       list: [{'id': 1, 'name': 'My wallet 1', 'points': 'Loyalty Points', 'lp': '4.35', 'send': '2.23', 'request': '6.12'},
         {'id': 2, 'name': 'My wallet 2', 'points': 'Loyalty Points', 'lp': '3.45', 'send': '2.23', 'request': '6.11'}],
@@ -32,8 +32,10 @@ export default class Wallets extends Component<Props> {
 
     // 高亮当前选中的卡片及更换数据
     debouncePress=(index)=>{
-        alert(index)
         this.setState = { 'active': index }
+        console.log(this.setState)
+      alert(this.setState.active)
+        this._renderAddWallet()
     }
 
   render() {
@@ -53,7 +55,10 @@ export default class Wallets extends Component<Props> {
        return (
            <View style={styles.header}>
              <Text style={styles.headerTitle}>{I18njs.t('Wallets.TotalBalance')}</Text>
-             <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance + 'LP'}</Text>
+             <View style={styles.headerAmount}>
+               <Text style={styles.headerSubtitle}>{this.state.userInfo.curentBalance}</Text>
+               <Text style={styles.headerSubtitleUnit}>LP</Text>
+             </View>
              <View style={styles.balance}>
                <View style={styles.balanceValue}>
                  <Image style={styles.icon1} source={Images.Img.arrow_down} />
@@ -96,16 +101,16 @@ export default class Wallets extends Component<Props> {
                                    <Text style={styles.titleCard} onPress={Actions.mywallet}>{info.name}</Text>
                                    <Text style={styles.totalAmount}>{info.points}</Text>
                                    <View style={styles.footerSubtitle}>
-                                       <Text style={styles.subtitleCard}>{info.lp}LP</Text>
-                                       {/*<Text style={styles.subtitleCardSmall}>LP</Text>*/}
+                                       <Text style={styles.subtitleCard}>{info.lp}</Text>
+                                       <Text style={styles.subtitleCardUnit}>LP</Text>
                                    </View>
                                </TouchableOpacity> :
                                <TouchableOpacity style={styles.footerCard2} onPress={()=>this.debouncePress(index)}>
                                    <Text style={styles.titleCard2}>{info.name}</Text>
                                    <Text style={styles.totalAmount2}>{info.points}</Text>
                                    <View style={styles.footerSubtitle2}>
-                                       <Text style={styles.subtitleCard2}>{info.lp}LP</Text>
-                                       {/*<Text style={styles.subtitleCard2Small}>LP</Text>*/}
+                                       <Text style={styles.subtitleCard2}>{info.lp}</Text>
+                                       <Text style={styles.subtitleCard2Unit}>LP</Text>
                                    </View>
                                </TouchableOpacity>}
                        </View>
@@ -149,10 +154,10 @@ const styles = StyleSheet.create({
     margin: px2dp(20),
     borderRadius: px2dp(10),
     padding: px2dp(20),
-    marginBottom: px2dp(30),
+    marginBottom: px2dp(20),
     shadowColor: '#78AEF9',
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
     shadowRadius: 15,
   },
   balance: {
@@ -170,24 +175,33 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: '#8E959D',
     fontSize: 14,
+    marginTop: px2dp(10),
     fontWeight: 'normal',
   },
-  headerSubtitle: {
-    color: '#7BB0FD',
-    fontSize: 32,
-    fontWeight: '300',
+  headerAmount: {
+    flexDirection: 'row',
     marginTop: px2dp(10),
     marginBottom: px2dp(20),
   },
+  headerSubtitle: {
+    color: '#7BB0FD',
+    fontSize: 36,
+  },
+  headerSubtitleUnit: {
+    fontWeight: '300',
+    color: '#7BB0FD',
+    fontSize: 16,
+    marginTop: px2dp(20),
+  },
   balanceTitle: {
     color: '#8E959D',
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: 'normal',
     opacity: 0.8,
   },
   balanceSubtitle: {
-    color: '#7BB0FD',
-    fontSize: 14,
+    color: '#5A6168',
+    fontSize: 16,
     fontWeight: 'normal',
   },
   icon1: {
@@ -222,24 +236,24 @@ const styles = StyleSheet.create({
   rightText: {
     fontSize: 14,
     color: '#78AEF9',
-    fontWeight: 'bold'
+    // fontWeight: 'bold'
   },
   footerCard1: {
     width: px2dp(200),
     height: px2dp(120),
-    marginRight: px2dp(10),
+    marginRight: px2dp(3),
     backgroundColor: '#78AEF9',
     borderRadius: 6,
     padding: px2dp(20),
     shadowColor: '#78AEF9',
-    shadowOffset: { width: 0, height: 8 },
+    shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.6,
     shadowRadius: 15,
   },
   footerCard2: {
     width: px2dp(200),
     height: px2dp(120),
-    marginRight: px2dp(10),
+    marginRight: px2dp(3),
     backgroundColor: '#EEF3F8',
     borderRadius: 6,
     padding: px2dp(20),
@@ -248,7 +262,7 @@ const styles = StyleSheet.create({
   titleCard: {
     fontSize: 16,
     color: '#fff',
-    fontWeight: 'bold'
+    // fontWeight: 'bold'
   },
   totalAmount: {
     fontSize: 12,
@@ -260,15 +274,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   subtitleCard: {
-    marginRight: px2dp(10),
+    // marginRight: px2dp(10),
     marginTop: px2dp(10),
     fontSize: 24,
     color: '#fff',
     fontWeight: 'normal'
   },
-  subtitleCardSmall: {
+  subtitleCardUnit: {
     marginRight: px2dp(10),
-    marginTop: px2dp(10),
+    marginTop: px2dp(20),
     fontSize: 14,
     color: '#fff',
     fontWeight: 'normal'
@@ -276,11 +290,11 @@ const styles = StyleSheet.create({
   titleCard2: {
     fontSize: 16,
     color: '#595F66',
-    fontWeight: 'bold'
+    // fontWeight: 'bold'
   },
   totalAmount2: {
     fontSize: 12,
-    color: '#595F66',
+    color: '#A8AEB6',
     fontWeight: '300',
     marginTop: px2dp(10)
   },
@@ -288,17 +302,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   subtitleCard2: {
-    marginRight: px2dp(10),
+    // marginRight: px2dp(10),
     marginTop: px2dp(10),
     fontSize: 24,
-    color: '#8D959D',
+    color: '#596066',
     fontWeight: 'normal'
   },
-  subtitleCard2Small: {
+  subtitleCard2Unit: {
     marginRight: px2dp(10),
-    marginTop: px2dp(10),
+    marginTop: px2dp(20),
     fontSize: 14,
-    color: '#8D959D',
+    color: '#596066',
     fontWeight: 'normal'
   },
   // 钱包卡片样式结束
@@ -306,6 +320,7 @@ const styles = StyleSheet.create({
   // 钱包详细信息样式开始
   Send: {
     margin: px2dp(20),
+    marginTop: px2dp(10),
     justifyContent: 'space-between',
     flexDirection: 'row',
     borderBottomWidth: 1,
