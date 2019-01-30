@@ -109,5 +109,10 @@ export  default {
         btn:'获取验证码',
         email:'邮箱登录',
         password:'密码登录'
+    },
+    cardWallet1:{
+        walletone:'当前忠诚度积分',
+        wallettwo:'请求',
+        walletthere:'发送',
     }
 }

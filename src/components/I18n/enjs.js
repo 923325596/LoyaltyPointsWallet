@@ -100,5 +100,10 @@ export  default {
         btn:'Get Code',
         email:'Email login',
         password:'Password login'
+    },
+    cardWallet1:{
+        walletone:'Current Loyalty points',
+        wallettwo:'REQUEST',
+        walletthere:'SEND',
     }
 }
