@@ -97,6 +97,11 @@ export  default {
         btn:'- code',
         email:'e - mail - login',
         password:'passwort anmelden'
+    },
+    cardWallet1:{
+        walletone:'aktuelle treue punkte',
+        wallettwo:'antrag',
+        walletthere:'schick',
     }
 
 }

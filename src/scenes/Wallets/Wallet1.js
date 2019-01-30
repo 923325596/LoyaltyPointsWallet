@@ -47,18 +47,18 @@ export default class Request extends Component<Props> {
         <View style={styles.container}>
           {/*卡片*/}
           <View style={styles.card1}>
-            <Text style={styles.card2}>Current Loyalty points</Text>
+            <Text style={styles.card2}>{I18njs.t('cardWallet1.walletone')}</Text>
             <Text style={styles.card3}>4.35
               <Text style={styles.card4}>LP</Text>
             </Text>
             <View style={styles.card5}>
               <Button
                   buttonStyle={styles.card6}
-                  title="REQUEST"
+                  title={I18njs.t('cardWallet1.wallettwo')}
               />
               <Button
                   buttonStyle={styles.card7}
-                  title="SEND"
+                  title={I18njs.t('cardWallet1.walletthere')}
               />
             </View>
           </View>
@@ -92,7 +92,6 @@ export default class Request extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f9f9f9',
   },
@@ -113,14 +112,14 @@ const styles = StyleSheet.create({
     fontSize:24,
     color:'#FFFFFF',
     marginLeft:px2dp(34),
-    marginTop: px2dp(5),
+    marginTop: px2dp(8),
   },
   card4:{
     fontSize:14,
     color:'#FFFFFF'
   },
   card5:{
-    marginTop: px2dp(20),
+    marginTop: px2dp(27),
     flexDirection: 'row',
   },
   card6:{
@@ -129,24 +128,26 @@ const styles = StyleSheet.create({
     marginLeft:px2dp(20),
     paddingLeft: px2dp(-20),
     backgroundColor:'#9dc4f8',
+    fontSize:11,
   },
   card7:{
     width: 90,
     height: 34,
     backgroundColor:'#9dc4f8',
     paddingLeft: px2dp(-20),
+    fontSize:11,
   },
   sillcard1:{
-    marginLeft: px2dp(-5),
-    marginTop: px2dp(15),
+    marginLeft: px2dp(-4),
+    marginTop: px2dp(27),
     fontSize:12,
     color:'#8E959E',
   },
   sillcard:{
-    width: 320,
+    width: 327,
     height: 64,
     marginLeft: px2dp(-5),
-    marginTop: px2dp(10),
+    marginTop: px2dp(12),
     flexDirection:'row',
     backgroundColor:'#FFFFFF',
     textAlign:'center',
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
   },
   list1:{
     marginLeft: px2dp(-5),
-    marginTop: px2dp(15),
+    marginTop: px2dp(16),
     fontSize:12,
     textAlign:'left',
     color:'#8E959E',
@@ -188,14 +189,14 @@ const styles = StyleSheet.create({
   },
   huadong:{
     width:320,
-    height:180,
+    height:256,
     backgroundColor:'#8F96A0',
-    marginTop: px2dp(10),
+    marginTop: px2dp(12),
   },
   huadong1:{
     width: 320,
     height: 64,
-    marginBottom: px2dp(1),
+    marginBottom: px2dp(0.2),
     flexDirection:'row',
     backgroundColor:'#FFFFFF',
     textAlign:'center',

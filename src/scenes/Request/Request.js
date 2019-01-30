@@ -49,12 +49,10 @@ export default class Request extends Component<Props> {
                     <View style={styles.disanbu2}>
                         <Button
                             buttonStyle={styles.disanbu3}
-                            iconLeft={{name: '', color: '#fff', size: 16,}}
                             title={I18njs.t('Request.copy')}
                         />
                         <Button
                             buttonStyle={styles.disanbu4}
-                            iconLeft={{name: '', color: '#fff', size: 16,}}
                             title={I18njs.t('Request.share')}
                         />
                         <Image style={styles.disanbu5} source={Images.Img.copy} />
@@ -72,56 +70,58 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#78AEF9',
-        paddingTop: px2dp(15),
     },
     fangkuai:{
-        width:327,
-        height:320,
+        width:340,
+        height:339,
         backgroundColor: '#FFFFFF',
         borderRadius:5,
     },
     fangkuaitou:{
-        width:327,
-        height:50,
+        width:340,
+        height:48,
         paddingTop: px2dp(15),
-        backgroundColor: '#CED4DA',
+        backgroundColor: '#F9F9F9',
         textAlign: 'left',
         flexDirection: 'row',
         color:'#5B6069',
     },
     fangkuaitou1:{
         marginLeft: px2dp(10),
+        marginTop:px2dp(3),
         fontSize:13,
-        width: 25,
-        height: 25,
+        width: 13,
+        height: 13,
     },
     fangkuaitou2:{
+        color:'#5B6069',
         marginLeft: px2dp(10),
         fontSize: 16,
     },
     fangkuaitou3:{
+        color:'#5B6069',
         marginLeft: px2dp(10),
         fontSize: 16,
     },
     fnagkuai4:{
         height:40,
-        width:327,
+        width:340,
         fontSize:14,
-        paddingTop: px2dp(8),
+        paddingTop: px2dp(16),
         justifyContent: 'center',
         alignItems: 'center',
         color:'#5B6069',
     },
     fnagkuai5:{
-        width:327,
-        height:150,
-        marginTop:px2dp(10),
+        width:340,
+        height:176,
+        marginTop:px2dp(13),
         justifyContent: 'center',
         alignItems: 'center',
     },
     fnagkuai6:{
-        width:167,
-        height:166,
+        width:179,
+        height:176,
         backgroundColor: '#CED4DA',
         fontSize:17,
     },
@@ -155,15 +155,15 @@ const styles = StyleSheet.create({
         fontSize:16,
     },
     dierbu2:{
-        marginLeft: px2dp(10),
+        marginLeft: px2dp(5),
         fontSize:10,
-        width:25,
-        height:18,
+        width:17,
+        height:14,
     },
     disanbu:{
         marginTop: px2dp(1),
         width:375,
-        height:140,
+        height:156,
         backgroundColor: '#6EA5F1',
         alignItems: 'center',
     },
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
         height:34,
         fontSize:11,
         borderColor:'#FFFFFF',
-        marginLeft:px2dp(15),
+        marginLeft:px2dp(16),
         borderStyle: 'solid',
         borderWidth: 1,
     },
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
         height:34,
         fontSize:11,
         borderColor:'#FFFFFF',
-        marginLeft:px2dp(-10),
+        marginLeft:px2dp(-19),
         borderStyle: 'solid',
         borderWidth: 1,
     },
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
         height: 20,
         position:'absolute',
         top:px2dp(6),
-        left:px2dp(47),
+        left:px2dp(53),
     },
     disanbu6:{
         fontSize:13,
@@ -210,6 +210,6 @@ const styles = StyleSheet.create({
         height: 20,
         position:'absolute',
         top:px2dp(6),
-        left:px2dp(223),
+        left:px2dp(215),
     }
 });

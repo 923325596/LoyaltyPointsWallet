@@ -58,7 +58,7 @@ export  default {
         address: '您的电子邮件地址',
         code: '验证码',
         password: '您的密码',
-        samllButton: '得到',
+        samllButton: '获取',
         button: '登录',
         signLeftBotton: '通过电话注册',
         signRightButton: '忘记密码'
@@ -68,7 +68,7 @@ export  default {
         phone: '你的电话号码',
         code: '验证码',
         password: '您的密码',
-        samllButton: '得到',
+        samllButton: '获取',
         button: '登录',
         signLeftBotton: '通过电子邮件注册',
     },
@@ -109,5 +109,10 @@ export  default {
         btn:'获取验证码',
         email:'邮箱登录',
         password:'密码登录'
+    },
+    cardWallet1:{
+        walletone:'当前忠诚度积分',
+        wallettwo:'请求',
+        walletthere:'发送',
     }
 }
