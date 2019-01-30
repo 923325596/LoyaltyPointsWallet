@@ -158,6 +158,9 @@ const styles = StyleSheet.create({
         lineHeight: 27,
     },
     emailBox: {
+        width: 310,
+        borderColor: '#CED4DA',
+        borderBottomWidth: px2dp(1),
         margin: px2dp(0),
         marginTop:px2dp(70),
     },
@@ -167,17 +170,24 @@ const styles = StyleSheet.create({
         lineHeight: 19,
         color: '#CED4DA',
         padding:px2dp(0),
+        marginLeft: px2dp(5),
         borderColor: '#CED4DA',
         paddingBottom: px2dp(8),
         borderBottomWidth: px2dp(0),
         fontFamily: 'PingFangSC-Regular',
     },
     emailCodeBox: {
+        width: 310,
+        borderColor: '#CED4DA',
+        borderBottomWidth: px2dp(1),
         padding: px2dp(0),
         marginTop:px2dp(36),
         position: 'relative',
     },
     emailPasswordBox: {
+        width: 310,
+        borderColor: '#CED4DA',
+        borderBottomWidth: px2dp(1),
         marginTop:px2dp(36),
     },
     emailButtonBox:{
@@ -214,6 +224,6 @@ const styles = StyleSheet.create({
         height: 30,
         position: 'absolute',
         top: -41,
-        right: 10,
+        right: -12,
     },
 });
