@@ -142,12 +142,12 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     loginContentView: {
-        width: 65,
+        width: 59,
         borderStyle: 'solid',
         borderColor: '#6AE1C4',
         borderBottomWidth:2,
         paddingTop: px2dp(22),
-        paddingBottom: px2dp(16),
+        paddingBottom: px2dp(9),
     },
     loginTitleHandle: {
         width: 260,
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     },
     emailBox: {
         margin: px2dp(0),
-        marginTop:px2dp(55),
+        marginTop:px2dp(70),
     },
     emailInput: {
         width: 300,
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
         padding:px2dp(0),
         borderColor: '#CED4DA',
         paddingBottom: px2dp(8),
-        borderBottomWidth: px2dp(2),
+        borderBottomWidth: px2dp(0),
         fontFamily: 'PingFangSC-Regular',
     },
     emailCodeBox: {
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
         marginTop:px2dp(36),
     },
     emailButtonBox:{
-        marginTop:px2dp(36),
+        marginTop:px2dp(44),
         backgroundColor: '#6AE1C4',
         color: '#ffffff',
         borderRadius: 4,
@@ -203,16 +203,17 @@ const styles = StyleSheet.create({
         fontFamily: 'PingFangSC-Regular',
     },
     emailInputButton: {
+        fontFamily: 'PingFangSC-Regular',
         backgroundColor: '#ffffff',
         borderStyle: 'solid',
         borderColor: '#6AD9E1',
         borderRadius: 3,
         borderWidth: 1,
+        fontSize: px2dp(12),
         width: 65,
-        height: 25,
+        height: 30,
         position: 'absolute',
-        top: -38,
+        top: -41,
         right: 10,
-        zIndex: 3,
     },
 });
