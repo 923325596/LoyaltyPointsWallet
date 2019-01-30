@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -35,12 +36,25 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* LoyaltyPointsWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LoyaltyPointsWalletTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		4BE24FCBD87F4CE589D3FDE6 /* libRCTToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEB5CC15D9E42189E9821C4 /* libRCTToast.a */; };
-		C3A9391A836D451583289036 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE300638DA8F46BF9F47C041 /* libRNI18n.a */; };
-		BE4AEE938E744BF7BE9CB80C /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD5B2511FE84FF2BA7D81BA /* libRNI18n-tvOS.a */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		838519F42AC3494F95B7F1A7 /* libRNPutiPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DE3485CB994DF0A2DB44DB /* libRNPutiPay.a */; };
+		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		BE4AEE938E744BF7BE9CB80C /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD5B2511FE84FF2BA7D81BA /* libRNI18n-tvOS.a */; };
+		C3A9391A836D451583289036 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE300638DA8F46BF9F47C041 /* libRNI18n.a */; };
+		DD8CF3302201813B0072FBF9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF32F2201813B0072FBF9 /* CoreMotion.framework */; };
+		DD8CF332220181F00072FBF9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF331220181F00072FBF9 /* CFNetwork.framework */; };
+		DD8CF334220182720072FBF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF333220182720072FBF9 /* Foundation.framework */; };
+		DD8CF3362201828F0072FBF9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF3352201828F0072FBF9 /* libsqlite3.tbd */; };
+		DD8CF338220182B40072FBF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF337220182B40072FBF9 /* UIKit.framework */; };
+		DD8CF33A220182BE0072FBF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF339220182BE0072FBF9 /* CoreGraphics.framework */; };
+		DD8CF33C220182CA0072FBF9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF33B220182CA0072FBF9 /* libsqlite3.0.tbd */; };
+		DD8CF33E220182D30072FBF9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF33D220182D30072FBF9 /* CoreText.framework */; };
+		DD8CF340220182DC0072FBF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF33F220182DC0072FBF9 /* QuartzCore.framework */; };
+		DD8CF342220182EB0072FBF9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF341220182EB0072FBF9 /* CoreTelephony.framework */; };
+		DD8CF344220182F60072FBF9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF343220182F60072FBF9 /* SystemConfiguration.framework */; };
+		DD8CF346220183010072FBF9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF345220183010072FBF9 /* libz.tbd */; };
+		DD8CF3482201830D0072FBF9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8CF3472201830D0072FBF9 /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -317,6 +331,34 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		DD8CF32422017F790072FBF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B42B2694D2A4C1AA3CB7FC9 /* RCTToast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 327633421BFAAD7E004DA88E;
+			remoteInfo = RCTToast;
+		};
+		DD8CF32822017F790072FBF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AC3B310BAD94DE7965BD45B /* RNI18n.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNI18n;
+		};
+		DD8CF32A22017F790072FBF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AC3B310BAD94DE7965BD45B /* RNI18n.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6476C4051EEAA69700B10F51;
+			remoteInfo = "RNI18n-tvOS";
+		};
+		DD8CF32D22017F790072FBF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFCA627C50E34985A8878877 /* RNPutiPay.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNPutiPay;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -329,6 +371,7 @@
 		00E356EE1AD99517003FC87E /* LoyaltyPointsWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoyaltyPointsWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* LoyaltyPointsWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoyaltyPointsWalletTests.m; sourceTree = "<group>"; };
+		0AC3B310BAD94DE7965BD45B /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* LoyaltyPointsWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoyaltyPointsWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,17 +385,29 @@
 		2D02E47B1E0B4A5D006451C7 /* LoyaltyPointsWallet-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoyaltyPointsWallet-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* LoyaltyPointsWallet-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoyaltyPointsWallet-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B42B2694D2A4C1AA3CB7FC9 /* RCTToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTToast.xcodeproj; path = "../node_modules/@remobile/react-native-toast/ios/RCTToast.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		5B42B2694D2A4C1AA3CB7FC9 /* RCTToast.xcodeproj */ = {isa = PBXFileReference; name = "RCTToast.xcodeproj"; path = "../node_modules/@remobile/react-native-toast/ios/RCTToast.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		BBEB5CC15D9E42189E9821C4 /* libRCTToast.a */ = {isa = PBXFileReference; name = "libRCTToast.a"; path = "libRCTToast.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		0AC3B310BAD94DE7965BD45B /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		BE300638DA8F46BF9F47C041 /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		CBD5B2511FE84FF2BA7D81BA /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		DFCA627C50E34985A8878877 /* RNPutiPay.xcodeproj */ = {isa = PBXFileReference; name = "RNPutiPay.xcodeproj"; path = "../node_modules/react-native-puti-pay/ios/RNPutiPay.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		D9DE3485CB994DF0A2DB44DB /* libRNPutiPay.a */ = {isa = PBXFileReference; name = "libRNPutiPay.a"; path = "libRNPutiPay.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		BBEB5CC15D9E42189E9821C4 /* libRCTToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTToast.a; sourceTree = "<group>"; };
+		BE300638DA8F46BF9F47C041 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
+		CBD5B2511FE84FF2BA7D81BA /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
+		D9DE3485CB994DF0A2DB44DB /* libRNPutiPay.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPutiPay.a; sourceTree = "<group>"; };
+		DD8CF32F2201813B0072FBF9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DD8CF331220181F00072FBF9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DD8CF333220182720072FBF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD8CF3352201828F0072FBF9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DD8CF337220182B40072FBF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD8CF339220182BE0072FBF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD8CF33B220182CA0072FBF9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DD8CF33D220182D30072FBF9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DD8CF33F220182DC0072FBF9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DD8CF341220182EB0072FBF9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DD8CF343220182F60072FBF9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DD8CF345220183010072FBF9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DD8CF3472201830D0072FBF9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DFCA627C50E34985A8878877 /* RNPutiPay.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPutiPay.xcodeproj; path = "../node_modules/react-native-puti-pay/ios/RNPutiPay.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +423,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8CF3482201830D0072FBF9 /* libc++.tbd in Frameworks */,
+				DD8CF346220183010072FBF9 /* libz.tbd in Frameworks */,
+				DD8CF344220182F60072FBF9 /* SystemConfiguration.framework in Frameworks */,
+				DD8CF342220182EB0072FBF9 /* CoreTelephony.framework in Frameworks */,
+				DD8CF340220182DC0072FBF9 /* QuartzCore.framework in Frameworks */,
+				DD8CF33E220182D30072FBF9 /* CoreText.framework in Frameworks */,
+				DD8CF33C220182CA0072FBF9 /* libsqlite3.0.tbd in Frameworks */,
+				DD8CF33A220182BE0072FBF9 /* CoreGraphics.framework in Frameworks */,
+				DD8CF338220182B40072FBF9 /* UIKit.framework in Frameworks */,
+				DD8CF3362201828F0072FBF9 /* libsqlite3.tbd in Frameworks */,
+				DD8CF334220182720072FBF9 /* Foundation.framework in Frameworks */,
+				DD8CF332220181F00072FBF9 /* CFNetwork.framework in Frameworks */,
+				DD8CF3302201813B0072FBF9 /* CoreMotion.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -532,6 +600,19 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD8CF3472201830D0072FBF9 /* libc++.tbd */,
+				DD8CF345220183010072FBF9 /* libz.tbd */,
+				DD8CF343220182F60072FBF9 /* SystemConfiguration.framework */,
+				DD8CF341220182EB0072FBF9 /* CoreTelephony.framework */,
+				DD8CF33F220182DC0072FBF9 /* QuartzCore.framework */,
+				DD8CF33D220182D30072FBF9 /* CoreText.framework */,
+				DD8CF33B220182CA0072FBF9 /* libsqlite3.0.tbd */,
+				DD8CF339220182BE0072FBF9 /* CoreGraphics.framework */,
+				DD8CF337220182B40072FBF9 /* UIKit.framework */,
+				DD8CF3352201828F0072FBF9 /* libsqlite3.tbd */,
+				DD8CF333220182720072FBF9 /* Foundation.framework */,
+				DD8CF331220181F00072FBF9 /* CFNetwork.framework */,
+				DD8CF32F2201813B0072FBF9 /* CoreMotion.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 			);
 			name = Frameworks;
@@ -594,6 +675,7 @@
 				00E356EF1AD99517003FC87E /* LoyaltyPointsWalletTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				DD8CF2F622017F790072FBF9 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -616,6 +698,42 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD8CF2F622017F790072FBF9 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB5CC15D9E42189E9821C4 /* libRCTToast.a */,
+				BE300638DA8F46BF9F47C041 /* libRNI18n.a */,
+				D9DE3485CB994DF0A2DB44DB /* libRNPutiPay.a */,
+				CBD5B2511FE84FF2BA7D81BA /* libRNI18n-tvOS.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		DD8CF31D22017F790072FBF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD8CF32922017F790072FBF9 /* libRNI18n.a */,
+				DD8CF32B22017F790072FBF9 /* libRNI18n-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD8CF31F22017F790072FBF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD8CF32522017F790072FBF9 /* libRCTToast.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD8CF32122017F790072FBF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD8CF32E22017F790072FBF9 /* libRNPutiPay.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -708,6 +826,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = AHDK372R3L;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -768,6 +889,10 @@
 					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
 				},
 				{
+					ProductGroup = DD8CF31F22017F790072FBF9 /* Products */;
+					ProjectRef = 5B42B2694D2A4C1AA3CB7FC9 /* RCTToast.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
 					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
 				},
@@ -778,6 +903,14 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = DD8CF31D22017F790072FBF9 /* Products */;
+					ProjectRef = 0AC3B310BAD94DE7965BD45B /* RNI18n.xcodeproj */;
+				},
+				{
+					ProductGroup = DD8CF32122017F790072FBF9 /* Products */;
+					ProjectRef = DFCA627C50E34985A8878877 /* RNPutiPay.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1050,6 +1183,34 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		DD8CF32522017F790072FBF9 /* libRCTToast.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTToast.a;
+			remoteRef = DD8CF32422017F790072FBF9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD8CF32922017F790072FBF9 /* libRNI18n.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNI18n.a;
+			remoteRef = DD8CF32822017F790072FBF9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD8CF32B22017F790072FBF9 /* libRNI18n-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNI18n-tvOS.a";
+			remoteRef = DD8CF32A22017F790072FBF9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD8CF32E22017F790072FBF9 /* libRNPutiPay.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNPutiPay.a;
+			remoteRef = DD8CF32D22017F790072FBF9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1188,16 +1349,15 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = LoyaltyPointsWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoyaltyPointsWallet.app/LoyaltyPointsWallet";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1205,12 +1365,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoyaltyPointsWallet.app/LoyaltyPointsWallet";
 			};
 			name = Debug;
 		};
@@ -1219,16 +1380,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = LoyaltyPointsWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoyaltyPointsWallet.app/LoyaltyPointsWallet";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1236,12 +1396,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoyaltyPointsWallet.app/LoyaltyPointsWallet";
 			};
 			name = Release;
 		};
@@ -1251,6 +1412,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = AHDK372R3L;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = LoyaltyPointsWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1258,15 +1426,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LoyaltyPointsWallet;
 				PRODUCT_NAME = LoyaltyPointsWallet;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1275,6 +1437,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AHDK372R3L;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = LoyaltyPointsWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1282,15 +1451,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LoyaltyPointsWallet;
 				PRODUCT_NAME = LoyaltyPointsWallet;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1306,8 +1469,21 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = "LoyaltyPointsWallet-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1317,19 +1493,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1345,8 +1508,21 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = "LoyaltyPointsWallet-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1356,19 +1532,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1383,8 +1546,21 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = "LoyaltyPointsWallet-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1394,19 +1570,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoyaltyPointsWallet-tvOS.app/LoyaltyPointsWallet-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1421,8 +1584,21 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules@remobile\neact-native-toastiosRCTToast",
+					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)..\node_modules\neact-native-puti-payios/**",
+				);
 				INFOPLIST_FILE = "LoyaltyPointsWallet-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1432,19 +1608,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoyaltyPointsWallet-tvOS.app/LoyaltyPointsWallet-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\@remobile\react-native-toast\ios\RCTToast",
-					"$(SRCROOT)\..\node_modules\react-native-i18n\ios",
-					"$(SRCROOT)\..\node_modules\react-native-puti-pay\ios/**",
-				);
 			};
 			name = Release;
 		};
